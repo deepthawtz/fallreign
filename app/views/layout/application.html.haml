@@ -1,0 +1,28 @@
+!!! Strict
+%html{ html_attrs("en_us") }
+  %head
+    %title ::fall reign::
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %link{ :href => "/stylesheets/master.css", :rel => "stylesheet", :media => "screen", :type => "text/css", :charset => "utf-8" }/
+  %body
+    %div#header-container
+      %img{ :src => "/images/fall_reign_logo.jpg" }
+      %h1 Fall Reign Records
+    %div#nav
+      = link_to "HOME", "/home"
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      = link_to "MUSIC", "/music"
+      &nbsp;&nbsp;|&nbsp;&nbsp;  
+      = link_to "GALLERY", "/gallery"
+      &nbsp;&nbsp;|&nbsp;&nbsp;  
+      = link_to "CONTACT", "/contact"
+
+    %div#main-container  
+      = catch_content :for_layout
+    
+    %div#footer-container
+      %hr
+      %div.left
+        &nbsp;powered by <a href="http://merbivore.org">Merb</a> &nbsp;&nbsp;|&nbsp;&nbsp;developed by <a href="http://deepthawtz.net">Deepthawtz</a> 
+      %div.right
+        &copy; 2008 fall reign&nbsp;&nbsp;
