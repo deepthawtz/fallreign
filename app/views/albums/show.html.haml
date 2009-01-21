@@ -1,0 +1,10 @@
+%h1
+  = @album.title
+
+%p
+  = @album.description
+  
+  
+= link_to 'Edit',  url(:edit_album,  @album)
+|
+= link_to 'Back', url(:albums)

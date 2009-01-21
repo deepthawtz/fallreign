@@ -1,0 +1,18 @@
+%div.error
+  = error_messages_for @album
+
+
+= form_for(@album, :action => url(:albums)) do  
+  
+  %p
+    = text_field :title, :label => "Title:"
+    %br
+    = select :artist_id,:label=>"Artist:", :collection => Artist.all.map {|a| [a.id, a.name]}
+    %br
+    = text_area :description, :label => "Description:"
+    %br
+    = file_field :image, :label => "Image:"
+    %br
+    = submit "Create"
+ 
+= link_to 'Back', url(:albums)

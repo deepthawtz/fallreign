@@ -1,0 +1,15 @@
+%h1
+  Artists controller, edit action
+%p
+  Edit this file in
+  %tt
+    app/views/artists/edit.html.erb
+= error_messages_for @artist
+
+= form_for(@artist, :action => url(:artist, @artist)) do
+  %p
+    = submit "Update"
+
+= link_to 'Show', url(:artist, @artist)
+|
+= link_to 'Back', url(:artists)

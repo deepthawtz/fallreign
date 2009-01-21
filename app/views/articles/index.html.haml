@@ -1,0 +1,16 @@
+%h1
+  Articles controller, index action
+%p
+  Edit this file in
+  %tt
+    app/views/articles/index.html.erb
+%table
+  %tr
+  - for article in @articles
+    %tr
+      %td
+        = link_to 'Show', url(:article, article)
+      %td
+        = link_to 'Edit', url(:edit_article,  article)
+
+= link_to 'New', url(:new_article)

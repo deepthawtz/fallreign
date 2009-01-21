@@ -1,0 +1,23 @@
+%h1.title
+  Artists
+%hr
+%br  
+-# #artists-grid
+-#   - for artist in @artists
+-#     .section
+-#       %a{:href => "artists/#{artist.id}"}
+-#         = image_tag artist.image.url, :height => "70px"
+-#       
+-#       .artist_title
+-#         = artist.name
+
+
+= paginated_section @artists do
+  #artists-grid
+    - @artists.each do |artist|
+      %a{:href => "artists/#{artist.id}"}
+        = image_tag artist.image.url, :height => "70px"
+        .artist_title
+          = artist.name
+
+= page_entries_info @artists

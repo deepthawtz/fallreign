@@ -1,0 +1,12 @@
+#artist-page
+  %h1
+    = image_tag @artist.image.url, :height => "100px"  
+    = @artist.name 
+  %p
+    = link_to 'Homepage', "#{@artist.external_links}"
+  %p
+    = @artist.bio
+
+  = link_to 'Edit',  url(:edit_artist,  @artist)
+  |
+  = link_to 'Back', url(:artists)  

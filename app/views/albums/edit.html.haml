@@ -1,0 +1,15 @@
+%h1
+  Albums controller, edit action
+%p
+  Edit this file in
+  %tt
+    app/views/albums/edit.html.erb
+= error_messages_for @album
+
+= form_for(@album, :action => url(:album, @album)) do
+  %p
+    = submit "Update"
+
+= link_to 'Show', url(:album, @album)
+|
+= link_to 'Back', url(:albums)

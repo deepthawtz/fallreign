@@ -1,0 +1,17 @@
+%h1
+  Albums
+
+%table.list
+  %tr
+  - for album in @albums
+    %tr
+      %td 
+        = album.title
+      %td
+        = album.artist.name
+      %td
+        = link_to 'Show', url(:album, album)
+      %td
+        = link_to 'Edit', url(:edit_album,  album)
+
+= link_to 'New', url(:new_album)

@@ -1,0 +1,12 @@
+%div#music
+
+  %h1 Music by Fall Reign
+
+  - @albums.each do |album|
+    %div.albums
+      %h3
+        = album.title
+      %img{ :src => "/images/album_art/#{album.id}.jpg", :height => "100px", :width => "100px"}
+      %p                                      
+        = album.short_description
+   

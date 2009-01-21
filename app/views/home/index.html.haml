@@ -1,0 +1,12 @@
+%h1 Welcome
+
+
+- @articles.each do |article|
+  %div.article
+    %h1.title
+      = article.title
+    %h3.created_at
+      = article.created_at.strftime("%b %d %Y   ")
+    %div.body
+      = article.body
+         
