@@ -1,5 +1,6 @@
 class Arts < Application
   # provides :xml, :yaml, :js
+  before :ensure_authenticated, :exclude => [:show, :index]
 
   def index
     @arts = Art.paginate :page => params[:page], :per_page => 10

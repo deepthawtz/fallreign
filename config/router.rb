@@ -16,5 +16,4 @@ Merb::Router.prepare do
   match('/admin').to(:controller => 'admin')
 
   default_routes
-
 end
