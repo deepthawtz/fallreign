@@ -1,0 +1,18 @@
+= error_messages_for @art
+
+= form_for(@art, :action => url(:arts) ) do
+  #title New art
+  .row
+  = text_field :title, :label => "Title: "
+  .row
+  = text_field :artist, :label => "Artist: "
+  .row
+  = text_area :description, :label => "Description: "
+  .row
+  = file_field :image, :label => "Image:"
+  .submi
+  = submit "Update"
+
+= link_to 'Show', url(:art, @art)
+|
+= link_to 'Back', url(:arts)

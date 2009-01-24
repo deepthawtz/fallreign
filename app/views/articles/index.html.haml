@@ -1,16 +1,14 @@
-%h1
-  Articles controller, index action
-%p
-  Edit this file in
-  %tt
-    app/views/articles/index.html.erb
-%table
-  %tr
-  - for article in @articles
-    %tr
-      %td
-        = link_to 'Show', url(:article, article)
-      %td
-        = link_to 'Edit', url(:edit_article,  article)
-
-= link_to 'New', url(:new_article)
+#nugget
+  %h1
+    Articles
+%br
+ 
+- @articles.each do |article|
+  .article
+    %h1.title
+      = article.title
+    %h3.created_at
+      = article.created_at.strftime("%b %d %Y   ")
+    %hr
+    .body
+      = article.body

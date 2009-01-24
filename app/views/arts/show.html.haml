@@ -1,0 +1,10 @@
+#nugget
+  %h1
+    = image_tag @art.image.url, :width => "570px"
+    
+  %h3
+    = @art.artist
+  %p
+    = @art.description
+
+= link_to 'Back', url(:arts)  

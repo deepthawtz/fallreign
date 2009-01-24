@@ -1,17 +1,18 @@
-%h1
-  Albums
-
-%table.list
-  %tr
-  - for album in @albums
-    %tr
-      %td 
+#nugget
+  %h1
+    Albums
+%br
+       
+= paginated_section @albums do
+  - for album in @albums                       
+    .chunk
+      %a{:href => "albums/#{album.id}"}
+        = image_tag album.image.url, :height => "70px"
+      %h2
         = album.title
-      %td
-        = album.artist.name
-      %td
-        = link_to 'Show', url(:album, album)
-      %td
-        = link_to 'Edit', url(:edit_album,  album)
-
-= link_to 'New', url(:new_album)
+        &nbsp;&nbsp;
+        = album.release_year
+      = album.artist.name   
+      %br
+      %br
+             

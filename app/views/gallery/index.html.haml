@@ -1,0 +1,6 @@
+#nugget
+  %h1 Gallery
+  
+  - @arts.each do |art|
+    = image_tag art.image.url, :height => "80px"
+    

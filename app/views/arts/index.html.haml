@@ -1,0 +1,14 @@
+#nugget
+  %h1.title
+    Gallery
+%br  
+
+= paginated_section @arts do
+  #artist-grid
+    - @arts.each do |art|
+      .chunk
+        %a{:href => "arts/#{art.id}"}
+          = image_tag art.image.url, :height => "70px"
+          .title
+            = art.title
+

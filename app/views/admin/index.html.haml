@@ -1,26 +1,96 @@
-%h1 Behind the Scenes Control
-%br
-%br
+#nugget
+  %h1 Behind the Scenes Control
+  %br
+  %br
 
 %h2 Artists
 %hr
-%table{:class => 'list'}
+%table.list
   %tr
   - for artist in @artists
     %a{:href => "#"}    
-      %tr{:class => 'artist'}
+      %tr
         %td
           = image_tag artist.image.url, :height => "50px"
-    
         %td
           %strong
             = artist.name
-      
-        %td{:class => 'small'}
+        %td.small
           = link_to 'Show', url(:artist, artist)
-        %td{:class => 'small'}
+        %td.small
           = link_to 'Edit', url(:edit_artist,  artist)
-        %td{:class => 'small'}
+        %td.small
           = delete_button artist, 'Delete', :class => 'delete'  
         
-= link_to 'New', url(:new_artist)
+= link_to 'Create New Artist', url(:new_artist)
+
+%br
+%br
+%br
+%h2 Albums
+%hr
+%table.list
+  %tr
+  - for album in @albums
+    %a{:href => "#"}    
+      %tr
+        %td
+          = image_tag album.image.url, :height => "50px"
+        %td
+          %strong
+            = album.title
+        %td.small
+          = link_to 'Show', url(:album, album)
+        %td.small
+          = link_to 'Edit', url(:edit_album, album)
+        %td.small
+          = delete_button album, 'Delete', :class => 'delete'  
+        
+= link_to 'Create New Album', url(:new_album)
+%br
+%br
+%br 
+
+%h2 Articles
+%hr
+%table.list
+  %tr
+  - for article in @articles
+    %tr
+      %td
+        %strong
+          = article.title
+      %td.small
+        = link_to 'Show', url(:article, article)
+      %td.small
+        = link_to 'Edit', url(:edit_article, article)
+      %td.small
+        = delete_button article, 'Delete', :class => 'delete'  
+
+= link_to 'Create New Article', url(:new_article)
+%br
+%br
+%br
+
+%h2 Gallery
+%hr
+%table.list
+  %tr
+  - for art in @arts
+    %tr        
+      %td
+        = image_tag art.image.url, :height => "50px"
+      %td
+        %strong
+          = art.title
+      %td.small
+        = link_to 'Show', url(:art, art)
+      %td.small
+        = link_to 'Edit', url(:edit_art, art)
+      %td.small
+        = delete_button art, 'Delete', :class => 'delete'  
+
+= link_to 'Post New Art', url(:new_art)
+%br
+%br
+%br

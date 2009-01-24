@@ -1,8 +1,9 @@
 class Artists < Application
   # provides :xml, :yaml, :js
-
+  before :ensure_authenticated, :exclude => [:show,:index]
+  
   def index
-    @artists = Artist.paginate :page => params[:page], :per_page => 5
+    @artists = Artist.paginate :page => params[:page], :per_page => 10
     render
   end
 

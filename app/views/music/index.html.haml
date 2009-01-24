@@ -1,12 +1,25 @@
-%div#music
+#nugget
 
   %h1 Music by Fall Reign
-
+  %hr
+  %br
+  
+  %h2 
+    Find by
+    = link_to "Artists", url(:artists)
+  %h2 
+    Find by
+    = link_to "Albums", url(:albums)
+     
+  %hr
+  %br
+  %br
   - @albums.each do |album|
-    %div.albums
-      %h3
-        = album.title
-      %img{ :src => "/images/album_art/#{album.id}.jpg", :height => "100px", :width => "100px"}
-      %p                                      
-        = album.short_description
+    .row
+    %a{:href => "albums/show/#{album.id}"}  
+      = image_tag album.image.url, :height => "70px"                                          
+    .row
+    = album.title
+    .row
+    = album.release_year
    

@@ -1,12 +1,18 @@
-%h1 Welcome
-
+#nugget
+  %h1 You Are Here
+  %p
+    Yet another website churned out by 
+    %a{:href=>"http://deepthawtz.net"}deepthawtz.
+    Not much of a big deal now, but oh it will be.
 
 - @articles.each do |article|
-  %div.article
-    %h1.title
+  .article
+    %h2.title
       = article.title
     %h3.created_at
       = article.created_at.strftime("%b %d %Y   ")
-    %div.body
+    %hr
+    %br
+    %p.body
       = article.body
          

@@ -1,10 +1,23 @@
-%h1
-  = @album.title
-
-%p
+#nugget
+  = image_tag @album.image.url, :height => "120px"
+  %h1
+    = @album.title       
+  %a{:href => "/artists/#{@album.artist.id}"}
+    %h2
+      = @album.artist.name
+    
+  %h3
+    = @album.release_year
+  
   = @album.description
-  
-  
-= link_to 'Edit',  url(:edit_album,  @album)
-|
+  %br
+  %h3 songs
+  %hr
+  %br
+  - b = @album.songs.split(",")
+  - @album.songs.split(",").each do |song|
+    &nbsp;+&nbsp;
+    = song
+    %br
+      
 = link_to 'Back', url(:albums)

@@ -1,9 +1,10 @@
 class Albums < Application
   # provides :xml, :yaml, :js
+  before :ensure_authenticated, :exclude => [:show, :index]
 
   def index
-    @albums = Album.all
-    display @albums
+    @albums = Album.paginate :page => params[:page], :per_page => 10
+    render
   end
 
   def show(id)

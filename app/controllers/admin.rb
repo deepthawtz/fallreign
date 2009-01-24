@@ -1,10 +1,11 @@
 class Admin < Application
-  # before :ensure_authenticated
+  before :ensure_authenticated
 
   def index
-    @artists = Artist.all
-    @albums  = Album.all
+    @artists  = Artist.all
+    @albums   = Album.all
     @articles = Article.all
+    @arts     = Art.all 
     display @artists
   end  
 end
