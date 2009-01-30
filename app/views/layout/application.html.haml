@@ -18,7 +18,7 @@
         #menu.yuimenubarnav.yuimenubar
           .bd
             - %w[ home music gallery contact].each do |nav|
-              = link_to "#{nav.upcase}", "#{nav}"
+              = link_to "#{nav.upcase}", "/#{nav}"
               &nbsp;&nbsp;|&nbsp;&nbsp;
             - if session.user          
               #admin-nug
