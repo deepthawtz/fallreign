@@ -31,4 +31,6 @@ class Album
   def get_proper_path
     self.image_path = File.join('public', 'uploads', "#{self.attachment.id}", "#{self.attachment.filename}")
   end  
-end
+end 
+
+
