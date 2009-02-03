@@ -76,6 +76,10 @@ h3 {
   font-weight: 300;
   padding: 5px;
   margin-top: 5px;
+}    
+h4 {
+  color:#000;
+  font-size: 18px;
 }
 #bd ul {
   margin-left: 3.0em;
@@ -136,7 +140,10 @@ h3 {
 #nugget p, #nugget h1, #nugget a {
   background: #ffffcc;
   color: #000;  
-}                      
+}   
+#nugget div.row {
+  font-color:#000;
+}                   
 #nugget-error {
   background: #fcf0f0;
   border: 1px solid #ff2222;
@@ -149,7 +156,6 @@ h3 {
   background-color: #eaf2f5;
   border: 1px solid #fbf2f5;
   padding: 1px;   
-  text-align: center;
 }
 .side-nugget p {
   background-center: #000;
@@ -213,4 +219,7 @@ p {
 }                        
 table.list td {
   padding: 6px;
+}
+.album {
+  color: #000;
 }
