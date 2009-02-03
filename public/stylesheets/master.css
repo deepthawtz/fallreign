@@ -1,7 +1,8 @@
 body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 * {
   margin: 0px;
@@ -58,7 +59,7 @@ hr {
 }
 h1 {
   font-size: 28px;
-  color: #000;
+  color: #111;
   background-color: #fff;
   font-weight: 300;
 }
@@ -81,7 +82,7 @@ h3 {
 }          
 #bd form {
   -x-system-font:none;
-  background-color:black;
+  background-color:#d3d3d3;
   color:#5A698B;
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size:11px;
@@ -123,14 +124,18 @@ h3 {
   text-align:right;
   width:135px;
 }                        
+#bd form.delete-btn {
+  background:transparent;
+}
 #nugget {
   background: #ffffcc;                          
   border: 3px solid #f2ec49; 
   padding: 10px;
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
 }
 #nugget p, #nugget h1, #nugget a {
-  background: #ffffcc;                          
+  background: #ffffcc;
+  color: #000;  
 }                      
 #nugget-error {
   background: #fcf0f0;
@@ -145,13 +150,16 @@ h3 {
   border: 1px solid #fbf2f5;
   padding: 1px;   
   text-align: center;
+}
+.side-nugget p {
+  background-center: #000;
 }                   
 .side-nugget h1, .side-nugget h2, .side-nugget h3 {
   text-align: center;
 }
 p {
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   line-height: 20px;
   padding: 5px;
 }             
