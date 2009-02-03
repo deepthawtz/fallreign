@@ -14,5 +14,5 @@
     %hr
     %br
     %p.body
-      = article.body
+      = BlueCloth.new(article.body).to_html
          

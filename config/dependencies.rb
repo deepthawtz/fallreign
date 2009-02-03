@@ -24,8 +24,11 @@ dependency "dm-validations", dm_gems_version
 
 dependency "merb_datamapper", merb_gems_version
 dependency "do_sqlite3" # If using another database, replace this
+
+
+
 dependency "dm-paperclip"
 dependency "merb_paginate"
+dependency "BlueCloth"
 
 require File.join(Merb.root, "/gems/", "artistname_helper.rb")
-require File.join(Merb.root, "/gems/", "attachable.rb")
