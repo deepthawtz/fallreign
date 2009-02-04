@@ -2,7 +2,7 @@ body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
   background-color: #000;
-  color: #fff;
+  color: #000;
 }
 * {
   margin: 0px;
@@ -12,6 +12,7 @@ body {
 html {
   height: 100%;
   margin-bottom: 1px;
+  background-color: #000;
 }
 #hd h1, #hd h2 {
   margin-bottom: 6px;                       
@@ -188,20 +189,20 @@ p {
 #ft {
   clear: both;
   font-size: 12px;
-  background-color: #ddd;
+  background-color: #000;
   margin-bottom: 10px;
 }
 .right {
   float: right;
   font-size: 100%;
   color: #999;
-  background-color: #fff;
+  background-color: #000;
 }
 .left {
   float: left;
   font-size: 100%;
   color: #999;
-  background-color: #fff;
+  background-color: #000;
 }
 .error, .notice {
   margin: 0px 5px 0px 0px;
