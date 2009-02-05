@@ -1,4 +1,4 @@
-module Merb
+ module Merb
   module HomeHelper
 
   end
