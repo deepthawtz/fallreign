@@ -1,10 +1,11 @@
 class Admin < Application
   before :ensure_authenticated
 
-  def index
+  def index              
+    @articles = Article.all    
     @artists  = Artist.all
-    @albums   = Album.all
-    @articles = Article.all
+    @albums   = Album.all  
+    @links    = Link.all
     @arts     = Art.all 
     display @artists
   end  

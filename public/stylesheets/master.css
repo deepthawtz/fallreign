@@ -2,6 +2,7 @@ body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
   background-color: #000;
+  margin-left: -140px;
   color: #000;
 }
 * {
@@ -14,26 +15,28 @@ html {
   margin-bottom: 1px;
   background-color: #000;
 }
+img#branch {
+  position: absolute;
+  top:0;left:0;
+}
 #hd h1, #hd h2 {
   margin-bottom: 6px;                       
   padding-left: 6px;
   color: #ff0000;
   font-size: 32px;
   background-color: #ddd;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 0px 0px 0px 10px;  
 }
 #menu {
 	background-color: #ccc;
 	padding: 4px;
+	height: 42px;
 	margin-left: 28px;
 	margin: 6px 0px 12px 20px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 0px 0px 0px 10px;
 }   
 #menu a {
 	background-color: #ccc;
-	font-size: 18px;
+	font-size: 18px;     
+	font-family: 'Monaco';
   color: #000;  
   padding-bottom: 1px;
   padding-right: 1px;
@@ -46,12 +49,28 @@ html {
   border-bottom: 1px solid #ff0000;
   border-right: 1px solid #ff0000;
 }
-#admin-nug a {
+#admin-nug-one a {
   color: #ff0000;
-  margin-left: 90%;
+  float: right;    
+  padding-left: 4px;
+/*  position: absolute;*/
+/*  border-bottom: 4px solid #000;*/
+/*  border-right: 2px solid #000;*/
+/*  top: 150px; left: 824px;*/
+
+}             
+#admin-nug-two a {
+  color: #ff0000;
+  float: right;
+  padding-right: 4px;
+/*  position: absolute;*/
+/*  border-bottom: 2px solid #000;*/
+  border-right: 2px solid #000;
+/*  top: 176px; left: 819px;*/
+
 }
 hr {
-  border: 0px;
+  border: 0;
   color: #ccc;
   background-color: #cdcdcd;
   height: 1px;

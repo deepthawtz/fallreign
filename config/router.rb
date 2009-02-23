@@ -1,5 +1,6 @@
 Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do
+  resources :links
   resources :arts
   resources :articles
   resources :artists
@@ -10,10 +11,9 @@ Merb::Router.prepare do
   
   # Change this for your home page to be available at /
   match('/').to(:controller => 'home')
-  match('/music').to(:controller => 'music')
+  match('/catalog').to(:controller => 'catalog')
   match('/gallery').to(:controller => 'gallery')
   match('/contact').to(:controller => 'contact')
   match('/admin').to(:controller => 'admin')
-
   default_routes
 end

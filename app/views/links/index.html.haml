@@ -1,0 +1,10 @@
+%h1 Links 
+
+- num = 0
+- @links.each do |link|
+  - num += 1
+  .link
+    %h2.title
+      %a{ :href => "#{link.url}" }
+        == #{num}.
+        = link.title 

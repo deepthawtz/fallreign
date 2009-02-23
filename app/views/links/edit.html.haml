@@ -1,0 +1,14 @@
+= error_messages_for @link
+
+= form_for(@link, :action => url(:link, @link)) do
+  #title Edit Link
+  .row
+  = text_field :title, :label => "Give a Link a Name: "
+  .row
+  = text_field :url, :label => "Da link: "
+  .submit
+  = submit "Update"
+
+= link_to 'Show', url(:link, @link)
+|
+= link_to 'Back', url(:links)

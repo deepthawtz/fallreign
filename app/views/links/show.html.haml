@@ -1,0 +1,7 @@
+#nugget
+  %h2
+    = @link.title
+  %a{:href => "#{@link.url}"}
+    = @link.url
+
+= link_to 'Back', url(:links)

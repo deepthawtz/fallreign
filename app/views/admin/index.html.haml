@@ -94,3 +94,19 @@
 %br
 %br
 %br
+
+%h2 Links
+%hr
+%table
+  %tr
+  - for link in @links
+    %tr
+      %td
+        = link_to 'Show', url(:link, link)
+      %td
+        = link_to 'Edit', url(:edit_link,  link)
+
+= link_to 'New', url(:new_link)
+%br
+%br
+%br

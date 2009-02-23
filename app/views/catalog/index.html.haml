@@ -1,0 +1,25 @@
+- throw_content :sidebar_one do
+  %h4 
+    Find by
+    = link_to "Artists", url(:artists)
+  %h4 
+    Find by         
+    = link_to "Albums", url(:albums)
+  
+
+
+#nugget
+
+  %h1 Music by Fall Reign
+  %hr
+  %br
+  
+  - @albums.each do |album|
+    .album
+      %a{:href => "albums/show/#{album.id}"}  
+        = image_tag album.image.url(:medium)                                          
+      .title
+      = album.title
+      .year  
+        = album.release_year
+   
