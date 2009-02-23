@@ -16,7 +16,7 @@
   
   - @albums.each do |album|
     .album
-      %a{:href => "albums/show/#{album.id}"}  
+      %a{:href => "/albums/show/#{album.id}"}  
         = image_tag album.image.url(:medium)                                          
       .title
       = album.title

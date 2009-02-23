@@ -11,7 +11,7 @@
     %a{:href => "#"}    
       %tr
         %td
-          = image_tag artist.image.url, :height => "50px"
+          = image_tag artist.image.url(:small)
         %td
           %strong
             = artist.name
@@ -35,7 +35,7 @@
     %a{:href => "#"}    
       %tr
         %td
-          = image_tag album.image.url, :height => "50px"
+          = image_tag album.image.url(:small)
         %td
           %strong
             = album.title
@@ -79,7 +79,7 @@
   - for art in @arts
     %tr        
       %td
-        = image_tag art.image.url, :height => "50px"
+        = image_tag art.image.url(:small)
       %td
         %strong
           = art.title
@@ -97,15 +97,20 @@
 
 %h2 Links
 %hr
-%table
+%table.list
   %tr
   - for link in @links
-    %tr
+    %tr                
       %td
+        %strong
+          = link.title
+      %td.small
         = link_to 'Show', url(:link, link)
-      %td
+      %td.small
         = link_to 'Edit', url(:edit_link,  link)
-
+      %td.small
+        = delete_button link, 'Delete', :class => 'delete'  
+      
 = link_to 'New', url(:new_link)
 %br
 %br

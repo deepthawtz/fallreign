@@ -1,5 +1,5 @@
 #nugget
-  = image_tag @album.image.url, :height => "120px"
+  = image_tag @album.image.url(:medium)
   %h1
     = @album.title       
   %a{:href => "/artists/#{@album.artist.id}"}
