@@ -1,5 +1,8 @@
 class Articles < Application
   # provides :xml, :yaml, :js
+  before :ensure_authenticated, :exclude => [:show, :index]
+
+#http://fallreign.com
 
   def index
     @articles = Article.all
