@@ -1,0 +1,20 @@
+%h2 Albums
+%hr
+%table.list
+  %tr
+  - @albums.each do |album|
+    %a{:href => "#"}    
+      %tr
+        %td
+          = image_tag album.image.url(:small)
+        %td
+          %strong
+            = album.title
+        %td.small
+          = link_to 'Show', url(:album, album)
+        %td.small
+          = link_to 'Edit', url(:edit_album, album)
+        %td.small
+          = delete_button album, 'Delete', :class => 'delete'  
+        
+= link_to 'Create New Album', url(:new_album)

@@ -20,6 +20,5 @@ Spec::Runner.configure do |config|
   
   config.before(:all) do
     DataMapper.auto_migrate! if Merb.orm == :datamapper
-  end
-  
+  end  
 end

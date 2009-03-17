@@ -30,8 +30,7 @@ describe "resource(:articles)" do
     end
     
     it "has a list of articles" do
-      pending
-      @response.should have_xpath("//ul/li")
+      @response.should have_xpath("//div[@class='article']")
     end
   end
   
@@ -43,7 +42,7 @@ describe "resource(:articles)" do
     end
     
     it "redirects to resource(:articles)" do
-      # @response.should redirect_to(resource(Article.first), :message => {:notice => "article was successfully created"})
+      # @response.should redirect_to(resource(Article.first), :message => {:notice => "Article was successfully created"})
     end
     
   end

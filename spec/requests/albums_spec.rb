@@ -34,7 +34,7 @@ describe "resource(:albums)" do
       @response.should have_xpath("//ul/li")
     end
   end
-  
+        
   describe "a successful POST" do
     before(:each) do
       Album.all.destroy!

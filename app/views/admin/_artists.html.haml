@@ -1,0 +1,20 @@
+%h2 Artists
+%hr
+%table.list
+  %tr
+  - for artist in @artists
+    %a{:href => "#"}    
+      %tr
+        %td
+          = image_tag artist.image.url(:small)
+        %td
+          %strong
+            = artist.name
+        %td.small
+          = link_to 'Show', url(:artist, artist)
+        %td.small
+          = link_to 'Edit', url(:edit_artist,  artist)
+        %td.small
+          = delete_button artist, 'Delete', :class => 'delete'  
+        
+= link_to 'Create New Artist', url(:new_artist)

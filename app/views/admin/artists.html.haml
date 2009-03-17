@@ -1,0 +1,24 @@
+#nugget
+  %h2 Artists
+  %a{:href => "/artists/new"}
+    = image_tag "/images/add_button.png", :class => 'add_button'
+  %hr
+  %table.list
+    %tr
+    - for artist in @artists
+      %a{:href => "#"}    
+        %tr
+          %td
+            = image_tag artist.image.url(:small)
+          %td
+            %strong
+              = artist.name
+          %td.small
+            = link_to 'Show', url(:artist, artist)
+          %td.small
+            = link_to 'Edit', url(:edit_artist,  artist)
+          %td.small
+            = delete_button artist, 'Delete', :class => 'delete'  
+
+  
+  

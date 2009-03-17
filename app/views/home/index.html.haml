@@ -5,10 +5,10 @@
       %h2.title
         = article.title
       %h3.created_at
-        = image_tag "/images/date.gif"
         = article.created_at.strftime("%b %d %Y   ")
-      %hr
-      %br
-      %p.body
+        = image_tag "/images/date.gif"
+      
+      .body
         = RedCloth.new(article.body).to_html
+         
          

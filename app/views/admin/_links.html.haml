@@ -1,0 +1,17 @@
+%h2 Links
+%hr
+%table.list
+  %tr
+  - for link in @links
+    %tr                
+      %td
+        %strong
+          = link.title
+      %td.small
+        = link_to 'Show', url(:link, link)
+      %td.small
+        = link_to 'Edit', url(:edit_link,  link)
+      %td.small
+        = delete_button link, 'Delete', :class => 'delete'  
+      
+= link_to 'New', url(:new_link)

@@ -7,8 +7,8 @@
     = css_include_tag :master
     - if session.user
       = js_include_tag :jquery, :application
-  
-  %body#yui-skin-sam
+
+  %body 
     #doc2.yui-t2
       #hd
         %a{ :href => "/" }        
@@ -16,7 +16,8 @@
           %img#header{:src => "/images/fr_header.png"}
         -#%img#banner{:src => "/images/fr_header.jpg"}
 
-        #menu.yuimenubarnav.yuimenubar
+
+        #menu.yuimenubar
           .bd
             - %w[ home catalog artists gallery links contact ].each do |nav|
               = link_to "#{nav.upcase}", "/#{nav}"
@@ -36,34 +37,16 @@
               - if message[type]
                 %div{:class => type}= message[:type]
             = catch_content :for_layout    
-
-        .yui-b
-          .side-nugget
-            = catch_content :sidebar_one
-          
-          %hr
-          %br
-          %h2 sidebar
-          %p
-            There is going to be enough room for a side bar right here where we can stuff content in and have it stay there.
-          %hr
-          .side-nugget
-            %h3
-              this space for rent
-            %br
-            %hr
-            %br
-          .side-nugget
-            = catch_content :sidebar_two
             
         
         #ft
           %hr
           %br
           .left             
-            a  
-            %a{:href=>"http://ghettochip.com"} deepthawtz
-            production   
+            brought to you by:
+            %a{:href=>"http://peoplewholikejazz.com"} 
+              people who like jazz
+
 
           .right
             &copy; 2009 

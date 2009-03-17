@@ -56,4 +56,4 @@ class Albums < Application
     end
   end
 
-end # Albums
+end

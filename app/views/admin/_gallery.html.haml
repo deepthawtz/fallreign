@@ -1,0 +1,19 @@
+%h2 Gallery
+%hr
+%table.list
+  %tr
+  - for art in @arts
+    %tr        
+      %td
+        = image_tag art.image.url(:small)
+      %td
+        %strong
+          = art.title
+      %td.small
+        = link_to 'Show', url(:art, art)
+      %td.small
+        = link_to 'Edit', url(:edit_art, art)
+      %td.small
+        = delete_button art, 'Delete', :class => 'delete'  
+
+= link_to 'Post New Art', url(:new_art)

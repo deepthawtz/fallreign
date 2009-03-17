@@ -2,7 +2,7 @@ body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
   background-color: #000;
-  margin-left: -140px;
+  margin-left: 18px;
   color: #000;
 }
 * {
@@ -25,13 +25,16 @@ img#branch {
   color: #ff0000;
   font-size: 32px;
   background-color: #ddd;
+}          
+#hd #header {
+  margin-left: 14px;
 }
 #menu {
 	background-color: #ccc;
 	padding: 4px;
 	height: 42px;
 	margin-left: 28px;
-	margin: 6px 0px 12px 20px;
+	margin: -2px 0px 12px 20px;
 }   
 #menu a {
 	background-color: #ccc;
@@ -152,15 +155,18 @@ h4 {
   background:transparent;
 }
 #nugget {
-  background: #ffffcc;                          
-  border: 3px solid #f2ec49; 
+  background: #D6FFAF;                          
+  border: 3px solid #9BEF2C; 
   padding: 10px;
   margin-bottom: 16px;
 }
 #nugget p, #nugget h1, #nugget a {
-  background: #ffffcc;
+  background: #D6FFAF;
   color: #000;  
-}   
+}  
+#nugget img.add_button {
+  float: right ;
+}
 #nugget div.row {
   font-color:#000;
 }                   
@@ -191,9 +197,19 @@ p {
 }             
 .article h2.title {
   margin:auto;
+  color: #20cefa;
 }
 .article h3.created_at {
   font-size: 12px;
+  color: saddlebrown;
+}                    
+.article .body {
+  border-bottom: 1px dotted #333;
+  padding: 4px 0 10px 20px;
+  margin-bottom: 18px;            
+}                         
+.pagination {
+  padding: 10px;
 }
 #bd a, #ft a {
   color: #4d9b12;

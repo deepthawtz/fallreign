@@ -5,7 +5,7 @@ given "a artist exists" do
   request(resource(:artists), :method => "POST", 
     :params => { :artist => { :id => nil }})
 end
-
+      
 describe "resource(:artists)" do
   describe "GET" do
     

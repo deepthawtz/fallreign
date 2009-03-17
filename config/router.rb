@@ -14,6 +14,13 @@ Merb::Router.prepare do
   match('/catalog').to(:controller => 'catalog')
   match('/gallery').to(:controller => 'gallery')
   match('/contact').to(:controller => 'contact')
-  match('/admin').to(:controller => 'admin')
+  match('/admin').to(:controller => 'admin') do
+    match('/artists').to(:action => 'artists')
+    match('/albums').to(:action => 'albums')
+    match('/links').to(:action => 'links')
+    match('/articles').to(:action => 'articles')
+    match('/gallery').to(:action => 'gallery')                
+  end
+
   default_routes
 end
