@@ -1,5 +1,5 @@
-%h2 Links
-%hr
+= link_to 'New', url(:new_link)
+
 %table.list
   %tr
   - for link in @links
@@ -14,4 +14,4 @@
       %td.small
         = delete_button link, 'Delete', :class => 'delete'  
       
-= link_to 'New', url(:new_link)
+

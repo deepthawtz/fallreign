@@ -1,5 +1,5 @@
-%h2 Articles
-%hr
+= link_to 'Create New Article', url(:new_article)
+
 %table.list
   %tr
   - for article in @articles
@@ -14,4 +14,4 @@
       %td.small
         = delete_button article, 'Delete', :class => 'delete'  
 
-= link_to 'Create New Article', url(:new_article)
+

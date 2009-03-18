@@ -1,7 +1,6 @@
 body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
-  background-color: #000;
   margin-left: 18px;
   color: #000;
 }
@@ -13,11 +12,20 @@ body {
 html {
   height: 100%;
   margin-bottom: 1px;
-  background-color: #000;
+
 }
 img#branch {
   position: absolute;
   top:0;left:0;
+  float: ;
+}
+#hd {
+  margin-left: 20px;
+}
+#hd #logo {
+  margin-right: -6px;
+  border: 6px solid #777;
+  float:left;
 }
 #hd h1, #hd h2 {
   margin-bottom: 6px;                       
@@ -26,9 +34,6 @@ img#branch {
   font-size: 32px;
   background-color: #ddd;
 }          
-#hd #header {
-  margin-left: 14px;
-}
 #menu {
 	background-color: #ccc;
 	padding: 4px;
@@ -38,23 +43,20 @@ img#branch {
 }   
 #menu a {
 	background-color: #ccc;
-	font-size: 18px;     
+	font-size: 22px;     
 	font-family: 'Monaco';
   color: #000;  
-  padding-bottom: 1px;
-  padding-right: 1px;
+  padding: 4px;
 }
 #menu a:hover {
   background-color: #fffdcb;
   text-decoration: none;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  border-bottom: 1px solid #ff0000;
-  border-right: 1px solid #ff0000;
+  padding: 4px;
 }
 #admin-nug-one a {
   color: #ff0000;
-  float: right;    
+  float: right;
+  font-size: 12px;    
   padding-left: 4px;
 /*  position: absolute;*/
 /*  border-bottom: 4px solid #000;*/
@@ -64,13 +66,13 @@ img#branch {
 }             
 #admin-nug-two a {
   color: #ff0000;
-  float: right;
+  float: right;  
+  font-size: 12px;
   padding-right: 4px;
 /*  position: absolute;*/
 /*  border-bottom: 2px solid #000;*/
   border-right: 2px solid #000;
 /*  top: 176px; left: 819px;*/
-
 }
 hr {
   border: 0;
@@ -163,7 +165,25 @@ h4 {
 #nugget p, #nugget h1, #nugget a {
   background: #D6FFAF;
   color: #000;  
-}  
+}               
+#admin_action_bar dl {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#admin_action_bar dd {
+  margin-left: 12px;
+  background-color: #fff;
+  color: #bbb;
+   
+}
+#admin_action_bar dd a.add {
+  
+}             
+#admin_action_bar dd td {
+  color: #444;
+  margin-bottom: 12px;
+}              
+
 #nugget img.add_button {
   float: right ;
 }
@@ -207,7 +227,11 @@ p {
   border-bottom: 1px dotted #333;
   padding: 4px 0 10px 20px;
   margin-bottom: 18px;            
-}                         
+}            
+.article p {
+  background: #fff;
+  color: #000;
+}              
 .pagination {
   padding: 10px;
 }
@@ -222,22 +246,22 @@ p {
   text-decoration: underline;
 }
 #ft {
-  clear: both;
   font-size: 12px;
-  background-color: #000;
+  background-color: #ccc;
+  min-heigth: 46px;
   margin-bottom: 10px;
 }
-.right {
+#ft .right {
   float: right;
   font-size: 100%;
   color: #999;
-  background-color: #000;
+  background-color: #ccc;
 }
-.left {
+#ft .left {
   float: left;
   font-size: 100%;
   color: #999;
-  background-color: #000;
+  background-color: #ccc;
 }
 .error, .notice {
   margin: 0px 5px 0px 0px;
@@ -254,8 +278,12 @@ p {
   color: #4d9b12;
 }                        
 table.list td {
-  padding: 6px;
+  padding: 6px; 
+  padding-right: 80px;
   color: #fff;
+}                      
+table.list tr {
+  border-bottom: 1px dotted #555;
 }
 .album {
   color: #000;

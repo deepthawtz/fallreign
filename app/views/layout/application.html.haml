@@ -13,14 +13,14 @@
       #hd
         %a{ :href => "/" }        
           %img#logo{ :src => "/images/fall_reign_logo.gif", :height => "140px" }                             
-          %img#header{:src => "/images/fr_header.png"}
-        -#%img#banner{:src => "/images/fr_header.jpg"}
-
+          %img{:src => '/images/tree_branch.png'}
+        /  %img#header{:src => "/images/fr_header.png"}
+        /  %img#banner{:src => "/images/fr_header.jpg"}
 
         #menu.yuimenubar
           .bd
-            - %w[ home catalog artists gallery links contact ].each do |nav|
-              = link_to "#{nav.upcase}", "/#{nav}"
+            - %w[ Home Catalog Artists Gallery Links Contact ].each do |nav|
+              = link_to "#{nav}", "/#{nav.downcase}"
               &nbsp;&nbsp;|&nbsp;&nbsp;
             - if session.user          
               #admin-nug-one  
@@ -36,29 +36,18 @@
             - [:error,:success,:notice].each do |type|
               - if message[type]
                 %div{:class => type}= message[:type]
-            = catch_content :for_layout    
-            
+            = catch_content :for_layout                
         
         #ft
           %hr
-          %br
           .left             
             brought to you by:
             %a{:href=>"http://peoplewholikejazz.com"} 
               people who like jazz
-
 
           .right
             &copy; 2009 
             %a{ :href => "/"}
               fall reign&nbsp;&nbsp;
         
-  :javascript               
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  
-  :javascript  
-    try {
-    var pageTracker = _gat._getTracker("UA-2419530-6");
-    pageTracker._trackPageview();
-    } catch(err) {}
+  = js_include_tag :ga

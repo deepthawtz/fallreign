@@ -1,5 +1,5 @@
-%h2 Albums
-%hr
+= link_to 'Create New Album', url(:new_album)
+
 %table.list
   %tr
   - @albums.each do |album|
@@ -17,4 +17,4 @@
         %td.small
           = delete_button album, 'Delete', :class => 'delete'  
         
-= link_to 'Create New Album', url(:new_album)
+

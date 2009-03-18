@@ -1,32 +1,36 @@
+= js_include_tag :admin
+
 #nugget
-  %h1 Admin Console to Your Stuff
-  %hr 
   
-  
-  %a{ :href => "/admin/artists" }
-    %h2 Artists
-
-  %a{ :href => "/admin/albums" }
-    %h2 Albums
-
-  %a{ :href => "/admin/articles" }
-    %h2 Articles
-
-  %a{ :href => "/admin/links" }
-    %h2 Links
-
-  %a{ :href => "/admin/gallery" }
-    %h2 Gallery
+  #admin_action_bar
+    %dl
+      %dt
+        %a{ :href => "#" }
+          %h2 Artists
+      %dd
+        = partial :artists
+           
+      %dt  
+        %a{ :href => "#" }
+          %h2 Albums
+      %dd
+        = partial :albums
+      
+      %dt  
+        %a{ :href => "#" }
+          %h2 Articles
+      %dd
+        = partial :articles
     
-
-    
--#= partial 'artists'
--#
--#= partial 'albums'
--#
--#= partial 'articles'
--#
--#= partial 'gallery'
--#
--#= partial 'links'
--#
+      %dt  
+        %a{ :href => "#" }
+          %h2 Links
+      %dd
+        = partial :links
+           
+      %dt  
+        %a{ :href => "#" }
+          %h2 Gallery
+      %dd
+        = partial :gallery    
+                          

@@ -1,5 +1,5 @@
-%h2 Artists
-%hr
+= link_to 'Create New Artist', url(:new_artist)
+
 %table.list
   %tr
   - for artist in @artists
@@ -17,4 +17,3 @@
         %td.small
           = delete_button artist, 'Delete', :class => 'delete'  
         
-= link_to 'Create New Artist', url(:new_artist)

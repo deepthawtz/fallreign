@@ -1,5 +1,5 @@
-%h2 Gallery
-%hr
+= link_to 'Create New Art', url(:new_art)
+
 %table.list
   %tr
   - for art in @arts
@@ -16,4 +16,4 @@
       %td.small
         = delete_button art, 'Delete', :class => 'delete'  
 
-= link_to 'Post New Art', url(:new_art)
+
