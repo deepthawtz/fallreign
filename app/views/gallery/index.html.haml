@@ -1,7 +1,8 @@
-#nugget
-  %h1 Gallery
-  
+= js_include_tag :thickbox
+= css_include_tag :thickbox
+
+#nugget  
   - @arts.each do |art|
-    %a{:href => "/arts/#{art.id}"}
+    %a.thickbox{:href => "#{art.image.url(:large)}", :title => "#{art.description}", :rel => "gallery", :alt => "#{art.title}"}
       = image_tag art.image.url(:medium)
     
