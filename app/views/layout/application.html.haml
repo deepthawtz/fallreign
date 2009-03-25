@@ -5,8 +5,7 @@
     %meta{ :content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
     = css_include_tag :reset_fonts_grids
     = css_include_tag :master
-    - if session.user
-      = js_include_tag :jquery, :application
+    = js_include_tag :jquery, :application
 
   %body 
     #doc2.yui-t2
