@@ -157,32 +157,26 @@ h4 {
   background:transparent;
 }
 #nugget {
-  background: #D6FFAF;                          
-  border: 3px solid #9BEF2C; 
+  background: #D6FFAF;
+  -webkit-border-bottom-right-radius: 14px 14px;
+  -webkit-border-top-left-radius: 14px 14px;                          
+  border: 2px solid #9BEF2C; 
   padding: 10px;
   margin-bottom: 16px;
 }
+#gallery {
+  background: #D6FFAF;
+  -webkit-border-bottom-right-radius: 14px 14px;
+  -webkit-border-top-left-radius: 14px 14px;                          
+  border: 2px solid #9BEF2C; 
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
 #nugget p, #nugget h1, #nugget a {
   background: #D6FFAF;
   color: #000;  
 }               
-#admin_action_bar dl {
-  margin-top: 20px;
-  margin-left: 20px;
-}
-#admin_action_bar dd {
-  margin-left: 12px;
-  background-color: #fff;
-  color: #bbb;
-   
-}
-#admin_action_bar dd a.add {
-  
-}             
-#admin_action_bar dd td {
-  color: #444;
-  margin-bottom: 12px;
-}              
 
 #nugget img.add_button {
   float: right ;
@@ -204,7 +198,7 @@ h4 {
   padding: 1px;   
 }
 .side-nugget p {
-  background-center: #000;
+  background: #000;
 }                   
 .side-nugget h1, .side-nugget h2, .side-nugget h3 {
   text-align: center;
@@ -248,7 +242,7 @@ p {
 #ft {
   font-size: 12px;
   background-color: #ccc;
-  min-heigth: 46px;
+  min-height: 46px;
   margin-bottom: 10px;
 }
 #ft .right {
