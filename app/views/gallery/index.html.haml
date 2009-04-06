@@ -3,6 +3,6 @@
 
 #gallery  
   - @arts.each do |art|
-    %a{:href => "#{art.image.url(:large)}", :title => "#{art.description}", :rel => "gallery", :alt => "#{art.title}"}
+    %a{:href => "#{art.image.url(:original)}", :title => "#{art.description}", :rel => "gallery", :alt => "#{art.title}"}
       = image_tag art.image.url(:medium)
     

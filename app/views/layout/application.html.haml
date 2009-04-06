@@ -3,32 +3,22 @@
   %head
     %title Fall Reign Records
     %meta{ :content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
-    = css_include_tag :reset_fonts_grids
-    = css_include_tag :master
-    = js_include_tag :jquery, :application
-
+    = css_include_tag :reset_fonts_grids, :master, :lavalamp
+    = js_include_tag :jquery, :easing, :lavalamp, :application
+   
   %body 
     #doc2.yui-t2
       #hd
         %a{ :href => "/" }        
           %img#logo{ :src => "/images/fall_reign_logo.gif", :height => "140px" }                             
           %img{:src => '/images/tree_branch.png'}
-        /  %img#header{:src => "/images/fr_header.png"}
-        /  %img#banner{:src => "/images/fr_header.jpg"}
-
-        #menu.yuimenubar
-          .bd
+        
+        #menu
+          %ul.lavaLamp        
             - %w[ Home Catalog Artists Gallery Links Contact ].each do |nav|
-              = link_to "#{nav}", "/#{nav.downcase}"
-              &nbsp;&nbsp;|&nbsp;&nbsp;
-            - if session.user          
-              #admin-nug-one  
-                = link_to "logout", "/logout"
-              #admin-nug-two
-                = link_to "manage", "/admin"
-            - else
-              #admin-nug-one
-                = link_to "login", "/login"
+              %li  
+                = link_to "#{nav}", "/#{nav.downcase}"
+
       #bd
         #yui-main          
           .yui-b

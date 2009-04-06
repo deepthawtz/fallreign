@@ -5,9 +5,9 @@ $(document).ready(function () {
   $('.delete').click(function() {
     var answer = confirm('Deletion will be permanent. Are you sure you want this?');
     return answer;
-  });               
-  $("#gallery").lightBox({
-    fixedNavigation:true,
+  });                     
+  
+  $("#gallery a").lightBox({
     imageLoading: 'images/loadingAnimation.gif'    
   })
 });
