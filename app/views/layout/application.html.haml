@@ -4,7 +4,7 @@
     %title Fall Reign Records
     %meta{ :content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
     = css_include_tag :reset_fonts_grids, :master, :lavalamp
-    = js_include_tag :jquery, :easing, :lavalamp, :application
+    = js_include_tag :jquery, :easing, :application, :lavalamp
    
   %body 
     #doc2.yui-t2
@@ -13,11 +13,10 @@
           %img#logo{ :src => "/images/fall_reign_logo.gif", :height => "140px" }                             
           %img{:src => '/images/tree_branch.png'}
         
-        #menu
-          %ul.lavaLamp        
-            - %w[ Home Catalog Artists Gallery Links Contact ].each do |nav|
-              %li  
-                = link_to "#{nav}", "/#{nav.downcase}"
+        %ul#menu        
+          - %w[ Home Catalog Artists Gallery Links Contact ].each do |nav|
+            %li  
+              = link_to "#{nav}", "/#{nav.downcase}"
 
       #bd
         #yui-main          

@@ -1,0 +1,340 @@
+/* Styles for the entire LavaLamp menu */
+.lavaLamp {
+    position: relative;
+    height: 29px; width: 100%;
+    background: #d6d984;
+    padding: 0px 15px 15px 15px; margin: 0px 0 10px 0;
+    overflow: hidden;
+}
+    /* Force the list to flow horizontally */
+    .lavaLamp li {
+        float: left;
+        list-style: none;                       
+    }
+        /* Represents the background of the highlighted menu-item. */
+        .lavaLamp li.back {
+            background: url("../image/lava.gif") no-repeat right -30px;
+            width: 9px; height: 30px;
+            z-index: 8;
+            position: absolute;
+        }
+            .lavaLamp li.back .left {
+                background: url("../image/lava.gif") no-repeat top left;
+                height: 30px;
+                margin-right: 9px;
+            }
+        /* Styles for each menu-item. */
+        .lavaLamp li a {
+            position: relative; overflow: hidden;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: transparent;
+            font: bold 24px arial;
+            color: #444; outline: none;
+            text-align: center;
+            height: 30px; top: 7px;
+            z-index: 10; letter-spacing: 0;
+            float: left; display: block;
+            margin: auto 10px;
+        }
+
+
+ /* LavaLamp Specific CSS: */
+
+ /* Demo 1 - Spaceship returnHome Demo */
+ #lavaLampBasicImage {
+ position: relative;
+ width: 444px;
+ background: url("images/bg.gif") no-repeat top;
+ padding: 15px;
+ padding-right:5px;
+ margin: 10px 0;
+ overflow: hidden;
+ height:40px;
+ }
+ #lavaLampBasicImage li {
+ float: left;
+ list-style: none;
+ }
+ #lavaLampBasicImage li.backLava {
+ background: url("images/lava.gif") no-repeat right -30px;
+ width: 9px; height: 30px;
+ z-index: 8;
+ position: absolute;
+ }
+ #lavaLampBasicImage li.backLava .leftLava {
+ background: url("images/lava.gif") no-repeat top left;
+ height: 30px;
+ margin-right: 9px; /* 7px is the width of the rounded shape */
+ }
+ #lavaLampBasicImage li a {
+ font: bold 14px arial;
+ text-decoration: none;
+ color: #fff;
+ outline: none;
+ text-align: center;
+ top: 7px;
+ text-transform: uppercase;
+ letter-spacing: 0;
+ z-index: 10;
+ display: block;
+ float: left;
+ height: 30px;
+ position: relative;
+ overflow: hidden;
+ margin: auto 8px;    
+ }
+ #lavaLampBasicImage li a:hover, #lavaLampBasicImage li a:active, #lavaLampBasicImage li a:visited {
+ color: #fff;
+ border: none;
+ }
+
+ /* Demo 2 - Vote Default on item 2 */
+ #lavaLampVariableImage {
+ position: relative;
+ width: 400px;
+ padding: 15px;
+ margin: 10px 0;
+ overflow: hidden;
+ border:solid 1px #CC6600;
+ }
+ #lavaLampVariableImage li {
+ float: left;
+ display:inline;
+ list-style: none;
+ }
+ #lavaLampVariableImage li.backLava {
+ background: url("images/slider-right.gif") no-repeat top right;
+ width: 24px;
+ z-index: 8;
+ position: absolute;
+ }
+ #lavaLampVariableImage li.backLava .leftLava {
+ background: url("images/slider-bg.gif") no-repeat top left;
+ height: 100%;
+ margin-right:24px;
+ }
+ #lavaLampVariableImage li.backLava .cornerLava {
+ background: url("images/slider-corner.gif") no-repeat bottom right;
+ height:27px;
+ width:24px;
+ position:absolute;
+ bottom:0px;
+ right:0px;
+ }
+ #lavaLampVariableImage li.backLava .bottomLava {
+ background: url("images/slider-bottom.gif") no-repeat bottom left;
+ height:27px;
+ width:100%;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ }
+ #lavaLampVariableImage li a {
+ font: bold 14px arial;
+ text-decoration: none;
+ color:#333333;
+ outline: none;
+ text-align: center;
+ padding: 17px 10px;
+ letter-spacing: 0;
+ z-index: 10;
+ display: block;
+ float: left;
+ position: relative;
+ overflow: hidden;
+ margin: auto 10px;    
+ }
+ #lavaLampVariableImage li a:hover, #lavaLampVariableImage li a:active, #lavaLampVariableImage li a:visited {
+ color: #333;
+ border: none;
+ }
+
+ /* Demo 3 - returnDelay Demo */
+ #lavaLampBorderOnly {
+ position: relative;
+ width: 500px;
+ background-color: white;
+ padding: 15px;
+ margin: 10px 0;
+ overflow: hidden;
+ border: 1px solid #CC6600;
+ }
+ #lavaLampBorderOnly li {
+ float: left;
+ list-style: none;
+ }
+ #lavaLampBorderOnly li.backLava {
+ border: 1px dashed #003399;
+ background-color:#99CCCC;
+ width: 9px;
+ z-index: 8;
+ position: absolute;
+ }
+ #lavaLampBorderOnly li a {
+ font: bold 14px arial;
+ text-decoration: none;
+ color: #000;
+ outline: none;
+ text-align: center;
+ padding: 5px 10px;
+ text-transform: uppercase;
+ letter-spacing: 0;
+ z-index: 10;
+ display: block;
+ float: left;
+ position: relative;
+ overflow: hidden;
+ margin: auto 10px;
+ }
+
+
+ /* Demo 4 - onClick & setOnClick:false demo */
+ #lavaLampVertical {
+ position: relative;
+ width: 200px;
+ padding: 15px;
+ margin: 10px 0;
+ overflow: hidden;
+ /*border: 2px dashed #0066FF;*/
+ }
+ #lavaLampVertical li {
+ list-style: none;
+ }
+ #lavaLampVertical li.backLava {
+ border-left: 20px dashed #FF9900;
+ background: #FFF5B2;
+ z-index: 8;
+ position: absolute;
+ }
+ #lavaLampVertical li a {
+ font: bold 14px 'Times',serif;
+ text-decoration: none;
+ border-bottom: none;
+ color: #4A2B01;
+ outline: none;     
+ background: transparent;
+ text-align: left;
+ padding: 10px 5px 3px;
+ letter-spacing: 2px;
+ z-index: 10;
+ display: block;
+ position: relative;
+ overflow: hidden;
+ margin: auto 10px;
+ }
+
+
+ /* Demo 5 - autoReturn:false demo  */
+ #lavaLampFun {
+ position: relative;
+ width: 500px;
+ background-color: white;
+ padding: 15px;
+ margin: 10px 0;
+ overflow: hidden;
+ border: 1px solid #CC6600;
+ }
+ #lavaLampFun li {
+ float: left;
+ list-style: none;
+ padding-left:24px;
+ margin-left:5px;
+ }
+ #lavaLampFun li.backLava {
+ background: url("images/baseball.png") no-repeat left;
+ z-index: 8;
+ position: absolute;
+ height: 30px;
+ }
+ #lavaLampFun li a {
+ font: bold 14px arial;
+ text-decoration: none;
+ color: #000;
+ outline: none;
+ text-align: center;
+ top: 7px;
+ text-transform: uppercase;
+ letter-spacing: 0;
+ z-index: 10;
+ display: block;
+ float: left;
+ height: 30px;
+ position: relative;
+ overflow: hidden;
+ margin: auto 10px;
+ }   
+ #lavaLampFun li a:hover {
+ border: none;
+ }
+
+ /* Demo 6 - returnHome and homing demo */
+ #lavaLampHome {
+ position: relative;
+ width: 450px;
+ background-color:#FFFFDD;
+ padding: 10px;
+ margin: 10px 0;
+ overflow: hidden;
+ border: 2px solid #663300;
+ }
+ #lavaLampHome li {
+ float: left;
+ list-style: none;
+ }
+ #lavaLampHome li.backLava {
+ border: 2px dashed #CC3300;
+ background-color:#FFCC99;
+ width: 9px;
+ position: absolute;
+ }
+ #lavaLampHome li a {
+ font:14pt Georgia, "Times New Roman", Times, serif;
+ text-decoration: none;
+ color: #330033;
+ text-align: center;
+ padding: 5px 10px;
+ letter-spacing: 0;
+ z-index: 10;
+ display: block;
+ float: left;
+ position: relative;
+ margin: auto 5px;
+ }
+
+ /* menu */
+ #menu {
+ font: bold 24px Arial;
+ text-transform: uppercase;
+ position:relative;
+ border-top: 1px solid #fff;
+ background-color: #ccc;
+ width:100%;
+ padding: 0px 0px 0px 6px;
+ margin: 0;         
+ margin-left: -20px;         
+ margin-bottom:10px;
+ overflow: hidden;
+ }
+ #menu li {
+ float: left;
+ list-style: none;
+ }
+ #menu li.backLava {
+ background-color:#D6FFAF;
+ border-right: 6px solid #4A3B29;
+ border-left: 6px solid #4A3B29;
+ position: absolute;
+ }
+ #menu li a {
+ text-decoration: none;
+ border-bottom: none;
+ color: #000;
+ background: transparent; 
+ text-align: center;
+ padding: 2px 16px;
+ z-index: 10;
+ display: block;
+ position: relative;
+ margin: auto 5px;
+ }        

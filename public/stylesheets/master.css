@@ -34,25 +34,6 @@ img#branch {
   font-size: 32px;
   background-color: #ddd;
 }          
-#menu {
-	background-color: #ccc;
-	padding: 4px;
-	height: 42px;
-	margin-left: 28px;
-	margin: -2px 0px 12px 20px;
-}   
-#menu a {
-	background-color: #ccc;
-	font-size: 22px;     
-	font-family: 'Monaco';
-  color: #000;  
-  padding: 4px;
-}
-#menu a:hover {
-  background-color: #fffdcb;
-  text-decoration: none;
-  padding: 4px;
-}
 #admin-nug-one a {
   color: #ff0000;
   float: right;
