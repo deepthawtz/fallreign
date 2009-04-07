@@ -6,11 +6,8 @@
   = paginated_section @artists do
     #artists-grid
       - @artists.each do |artist|
-        .chunk
-          %a{:href => "artists/#{artist.id}"}
-            = image_tag artist.image.url(:small)
-            .artist_title
-              = artist.name
+        %a{:href => "artists/#{artist.id}"}
+          = image_tag artist.image.url(:small)
+          = artist.name
 
 -#= page_entries_info @artists
-
