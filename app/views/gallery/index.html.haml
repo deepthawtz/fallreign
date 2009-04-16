@@ -2,7 +2,7 @@
 = css_include_tag :lightbox
 
 #gallery  
-  - @arts.each do |art|
-    %a{:href => "#{art.image.url(:original)}", :title => "#{art.description}", :rel => "gallery", :alt => "#{art.title}"}
+  - @arts.each do |art|     # original size of images is too big in many cases 
+    %a{:href => "#{art.image.url(:large)}", :title => "#{art.description}", :rel => "gallery", :alt => "#{art.title}"}
       = image_tag art.image.url(:medium)
-    
+                                                                           
