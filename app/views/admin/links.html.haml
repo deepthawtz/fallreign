@@ -1,0 +1,18 @@
+#new_button.ui-corner-all
+  .ui-icon.ui-icon-plusthick  
+  = link_to 'Create New Link', url(:new_link)
+
+%table.list
+  %tr
+  - for link in @links
+    %tr{:class => "#{cycle(:odd,:even)}"}                
+      %td.name
+        = link.title
+      %td.small
+        = link_to 'Show', url(:link, link)
+      %td.small
+        = link_to 'Edit', url(:edit_link,  link)
+      %td.small
+        = delete_button link, 'Delete', :class => 'delete'  
+      
+

@@ -1,0 +1,21 @@
+#new_button.ui-corner-all
+  .ui-icon.ui-icon-plusthick
+  = link_to 'Create New Album', url(:new_album)
+
+%table.list
+  %tr
+  - @albums.each do |album|
+    %a{:href => "#"}    
+      %tr{:class => "#{cycle(:odd,:even)}"}
+        %td
+          = image_tag album.image.url(:small)
+        %td.name
+          = album.title
+        %td.small
+          = link_to 'Show', url(:album, album)
+        %td.small
+          = link_to 'Edit', url(:edit_album, album)
+        %td.small
+          = delete_button album, 'Delete', :class => 'delete'  
+        
+

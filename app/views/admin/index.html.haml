@@ -1,36 +1,41 @@
-= js_include_tag :admin
-
-#nugget
-  
-  #admin_action_bar
-    %dl
-      %dt
-        %a{ :href => "#" }
-          %h2 Artists
-      %dd
-        = partial :artists
-           
-      %dt  
-        %a{ :href => "#" }
-          %h2 Albums
-      %dd
-        = partial :albums
-      
-      %dt  
-        %a{ :href => "#" }
-          %h2 Articles
-      %dd
-        = partial :articles
+#admin_nav
+  #admin                            
+    #lawft
+      = image_tag 'lawft_logo.png'         
+      %h1 Lawft Administration Console
+    %br        
+    %ul.admin_top
+      %li.ui-corner-all
+        .ui-icon.ui-icon-home
+        %a{:href => "/" } 
+          Your Site
+      %li.ui-corner-all 
+        .ui-icon.ui-icon-wrench
+        %a{:href => "#"} 
+          Settings
+      %li.ui-corner-all  
+        %a{:href => "/logout"}
+          Logout
+    %br
+    %br
+    #admin_menu
+      %ul
+        %li                            
+          %a{:href => "/admin/artists"}
+            == Artists <span class="count">(#{Artist.count})</span>
+        %li             
+          %a{:href => "/admin/albums"}
+            == Albums <span class="count">(#{Album.count})</span>          
+        %li  
+          %a{:href => "/admin/articles"} 
+            == Articles <span class="count">(#{Article.count})</span>
+        %li  
+          %a{:href => "/admin/links"} 
+            == Links <span class="count">(#{Link.count})</span>
+        %li
+          %a{:href => "/admin/gallery"} 
+            == Gallery <span class="count">(#{Art.count})</span>
+        %li
+          %a{:href => "/admin/songs"} 
+            == Songs <span class="count">(#{Song.count})</span>
     
-      %dt  
-        %a{ :href => "#" }
-          %h2 Links
-      %dd
-        = partial :links
-           
-      %dt  
-        %a{ :href => "#" }
-          %h2 Gallery
-      %dd
-        = partial :gallery    
-                          

@@ -2,17 +2,32 @@ class Admin < Application
   before :ensure_authenticated
 
   def index              
-    @articles = Article.all
-    @artists = Artist.all
-    @albums = Album.all
-    @links = Link.all
-    @arts = Art.all    
-    display @artists
+    @article = Article.all   
+    display @article, :layout => "admin"
   end
   
   def artists
     @artists = Artist.all  
     render 
   end                    
-      
+  def albums
+    @albums = Album.all  
+    render 
+  end                    
+  def articles
+    @articles = Article.all  
+    render 
+  end                    
+  def links
+    @links = Link.all  
+    render 
+  end                    
+  def gallery
+    @arts = Art.all
+    render
+  end
+  def songs
+    @songs = Song.all
+    render
+  end    
 end

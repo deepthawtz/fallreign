@@ -1,24 +1,22 @@
-#nugget
-  %h2 Artists
-  %a{:href => "/artists/new"}
-    = image_tag "/images/add_button.png", :class => 'add_button'
-  %hr
-  %table.list
-    %tr
-    - for artist in @artists
-      %a{:href => "#"}    
-        %tr
-          %td
-            = image_tag artist.image.url(:small)
-          %td
-            %strong
-              = artist.name
-          %td.small
-            = link_to 'Show', url(:artist, artist)
-          %td.small
-            = link_to 'Edit', url(:edit_artist,  artist)
-          %td.small
-            = delete_button artist, 'Delete', :class => 'delete'  
+#new_button.ui-corner-all
+  .ui-icon.ui-icon-plusthick
+  = link_to 'Create New Artist', url(:new_artist)
 
-  
-  
+%table.list
+  %tr
+  - @artists.each do |artist|
+    %a{:href => "#"}         
+      %tr{:class => "#{cycle(:odd,:even)}"}                
+        %td
+          = image_tag artist.image.url(:small)
+        %td.name
+          = artist.name
+        %td.small                
+          .ui-icon.ui-icon-document
+          = link_to 'Show', url(:artist, artist)
+        %td.small               
+          .ui-icon.ui-icon-pencil
+          = link_to 'Edit', url(:edit_artist,  artist)
+        %td.small                                             
+          .ui-icon.ui-icon-trash
+          = delete_button artist, 'Delete', :class => 'delete'  
