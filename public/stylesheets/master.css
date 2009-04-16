@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+  background: #000;
+  margin-bottom: 1px;
+}  
 body {
   font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size: 12px;
@@ -9,10 +14,8 @@ body {
   padding: 0px;
   text-decoration: none;
 }
-html {
-  height: 100%;
-  margin-bottom: 1px;
-
+.yui-t2 {
+  background-color: #fff;
 }
 img#branch {
   position: absolute;
@@ -191,19 +194,28 @@ p {
   background-color: #000;
   line-height: 20px;
   padding: 5px;
-}             
+}         
+.article {      
+  margin-left: 8%;
+  
+}    
 .article h2.title {
   margin:auto;
-  color: #20cefa;
+  margin-bottom: -10px;     
+  font: bold 32px Times, Georgia;
+  letter-spacing: -1px;
+  color: #A4DCFB;
 }
 .article h3.created_at {
-  font-size: 12px;
+  font: bold 12px Arial;
   color: saddlebrown;
-}                    
+  margin-bottom: -10px;
+}                     
 .article .body {
   border-bottom: 1px dotted #333;
-  padding: 4px 0 10px 20px;
+  padding: 4px 0 10px 10px;
   margin-bottom: 18px;            
+  width: 600px;
 }            
 .article p {
   background: #fff;
@@ -258,10 +270,10 @@ table.list td {
   padding: 6px; 
   padding-right: 80px;
   color: #fff;
+}
+table.list td:hover {
+  background: #ddd;
 }                      
 table.list tr {
   border-bottom: 1px dotted #555;
-}
-.album {
-  color: #000;
 }

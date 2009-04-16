@@ -1,6 +1,16 @@
-#nugget  
+= css_include_tag "catalog"
+#catalog  
   / TODO: Search Bar
   - @albums.each do |album|
-    %a.album{:href => "/albums/show/#{album.id}"}  
-      = image_tag album.image.url(:medium)                                          
-   
+    .album
+      %a{:href => "albums/#{album.id}"}                  
+        .pic
+          = image_tag album.image.url(:medium), :title => "#{album.title}"
+        %h1{:title => "#{album.title} / #{album.artist.name}"}
+          = album.title[18].nil? ? album.title : album.title[0,18] + ".."
+        %p  
+          = album.release_year
+        %p
+          = album.catalog_index
+        %p
+          = album.artist.name.upcase 
