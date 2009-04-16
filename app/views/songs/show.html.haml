@@ -1,0 +1,9 @@
+%h1 Song
+%h3 Title
+= @song.title
+
+/ %p                 
+/   %a{:href => "#{@song.audio.url}"}
+/     Play 
+
+= link_to 'Edit',  url(:edit_song,  @song)

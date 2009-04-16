@@ -22,5 +22,6 @@ merb_profile_results
 Capfile
 config/deploy.rb
 public/uploads/*
+public/audio/*
 *.pxm
 *.psd

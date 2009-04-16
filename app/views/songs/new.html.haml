@@ -1,0 +1,9 @@
+.error
+  = error_messages_for @song
+
+= form_for(@song, :action => url(:songs)) do
+  #title New Song
+  = partial 'form'
+  .submit
+    = submit "Create"
+

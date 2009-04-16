@@ -1,0 +1,9 @@
+%h1 Edit Your Song
+%p edit this view in /app/views/songs/edit.html.haml
+
+= error_messages_for @song
+
+= form_for(@song, :action => url(:song, @song)) do
+  = partial 'form'
+  %p
+    = submit "Update"
