@@ -4,12 +4,14 @@ class Album
   
   property :id, Serial
   property :title, String, :nullable => false
+  property :catalog_index, String
   property :artist_id, Integer 
-  property :description, Text, :default => "To be provided"
+  property :description, Text
   property :release_year, Integer
   property :songs, Text
 
-  belongs_to :artist    
+  belongs_to :artist                               
+  has n, :songs
   
   has_attached_file :image,
     :default_url => "/uploads/albums/:attachment/missing_:style.png",
@@ -17,18 +19,15 @@ class Album
     :path   => ":merb_root/public/uploads/albums/:id/:style/:basename.:extension",
     :styles => {:small => "55x55#", :medium => "100x100#", :large => "300x300#"}      
 
-  # validates_with_method :release_year, :proper_year?
-  # validates_with_method :image_path, :get_proper_path
+  validates_with_method :release_year, :proper_year?
                                                      
-  def proper_year?
-    if self.release_year !~ /^\d{4}$/
+  def proper_year?                   
+    if self.release_year.nil?
       [false, "Enter 4-digit year (e.g., 1994)"]
+    elsif self.release_year !~ /^\d{4}$/
+      true
     else
       true
     end
-  end                                                      
-                                                     
-  def get_proper_path
-    self.image_path = File.join('public', 'uploads', "#{self.attachment.id}", "#{self.attachment.filename}")
-  end  
+  end                                                                                                           
 end 
