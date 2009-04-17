@@ -26,7 +26,5 @@ dependency "merb_datamapper", merb_gems_version
 dependency "do_sqlite3" # If using another database, replace this
 
 dependency "dm-paperclip"
-dependency "merb_paginate"
+dependency "merb_paginate", "0.0.4"
 dependency "RedCloth"
-
-require File.join(Merb.root, "/gems/", "artistname_helper.rb")
