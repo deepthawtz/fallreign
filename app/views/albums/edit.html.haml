@@ -2,27 +2,7 @@
 
 = form_for(@album, :action => url(:album, @album)) do
   #title Edit album
-  .row
-  = text_field :title, :label => "Title: "
-  .row
-  = text_field :release_year, :label => "Release Year: "
-  <span style="color:red">*year only (eg, 1994)</span>
-  %br
-  
-  .row
-  = text_area :description, :label => "Description: ", :rows => 6
-  .row
-  = text_area :songs, :label => "Songs: ", :rows => 6
-  <span style="color:red">*separate songs w/ a comma</span>
-  %br
-  
-  .row
-  = file_field(:image, :label => "Image:&nbsp;")             
-  %br
-  <span style="color:red">*don't worry if this is blank. your original image will still be there. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you may replace it though, if you wish.</span>
-  %br
-
-
+  = partial :form
   .submit
   = submit "Update"
 

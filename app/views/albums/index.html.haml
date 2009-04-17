@@ -1,18 +1,13 @@
 #nugget
-  %h1
-    Albums
-%br
-       
-= paginated_section @albums do
-  - for album in @albums                       
-    .chunk
-      %a{:href => "albums/#{album.id}"}
-        = image_tag album.image.url, :height => "70px"
-      %h2
-        = album.title
-        &nbsp;&nbsp;
-        = album.release_year
-      = album.artist.name   
-      %br
-      %br
+  = paginated_section @albums do
+    - for album in @albums                       
+      .chunk
+        %a{:href => "albums/#{album.id}"}
+          = image_tag album.image.url, :height => "70px"
+        %h2
+          = album.title
+          = album.release_year
+        = album.artist.name   
+        %br
+        %br
              

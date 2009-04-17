@@ -1,6 +1,6 @@
 class Albums < Application
   # provides :xml, :yaml, :js
-  before :ensure_authenticated, :exclude => [:show, :index]
+  # before :ensure_authenticated
 
   def index
     @albums = Album.paginate :page => params[:page], :per_page => 10
@@ -28,8 +28,8 @@ class Albums < Application
 
   def create(album)
     @album = Album.new(album)
-    if @album.save
-      redirect resource(@album), :message => {:notice => "Album was successfully created"}
+    if @album.save                     
+      redirect '/admin', :message => {:notice => "Album was successfully created"}
     else
       message[:error] = "Album failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Albums < Application
     @album = Album.get(id)
     raise NotFound unless @album
     if @album.update_attributes(album)
-       redirect resource(@album)
+      redirect '/admin'
     else
       display @album, :edit
     end
@@ -50,7 +50,7 @@ class Albums < Application
     @album = Album.get(id)
     raise NotFound unless @album
     if @album.destroy
-      redirect resource(:albums)
+      redirect '/admin'
     else
       raise InternalServerError
     end

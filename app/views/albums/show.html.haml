@@ -1,4 +1,4 @@
-#nugget
+#album
   = image_tag @album.image.url(:large)
   %h1
     == #{@album.title} <span style="font-size:16px;color:#666">[#{@album.release_year}]</span> 
@@ -10,13 +10,13 @@
     %h2
       %a{:href => "/artists/#{@album.artist.id}"}
         = @album.artist.name    
-  
+
   = @album.description
   %br
   %br
   %br
   %br
-  %h2 Tracks
+  / %h2 Tracks
   %hr
   %br
   /- b = @album.songs.split(",")     
@@ -24,5 +24,5 @@
   / @album.songs.split(",").each do |song|
   /  == <span style="font: bold 18px Times;color: grey">#{count}.</span>&nbsp;&nbsp;   <b>#{song.chomp("\s").capitalize}</b>
   /- count += 1
-  %br
+  %br 
       

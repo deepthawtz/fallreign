@@ -1,4 +1,22 @@
-%p Title:
-  %text_field{:name => 'title'}
-%p 
-  
+.row
+= file_field :image, :label => "<b>Image:</b>"
+
+.row
+= text_field :title, :label => "<b>Title:</b>"
+
+.row
+= select :artist_id,:label=>"<b>Artist:</b>", :collection => Artist.all.map {|a| [a.id, a.name]}                    
+
+.row
+= text_field :catalog_index, :label => "<b>Catalog Id:</b>", :length => "8"
+
+.row
+= text_field :release_year, :label => "<b>Release Year:</b>", :size => "4"
+<span style="color:red">*year only (eg, 1994)</span>
+
+.row
+= text_area :description, :label => "<b>Description:</b>", :rows => "6", :cols => "30"
+
+.row
+= text_area :songs, :label => "<b>Songs:</b>", :rows => "6", :cols => "30"
+<span style="color:red">*separate songs w/ a comma</span>
