@@ -309,8 +309,8 @@
  position:relative;
  border-top: 1px solid #fff;
  background-color: #ccc;
- width:100%;
- padding: 0px 0px 0px 6px;
+ width: 872px;
+ padding: 0px 0px 0px 4px;
  margin: 0;         
  margin-left: -20px;         
  margin-bottom:10px;
@@ -332,7 +332,7 @@
  color: #000;
  background: transparent; 
  text-align: center;
- padding: 2px 16px;
+ padding: 2px 17px;
  z-index: 10;
  display: block;
  position: relative;

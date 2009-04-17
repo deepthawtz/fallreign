@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: #000;
+  background: #333;
   margin-bottom: 1px;
 }  
 body {
@@ -36,27 +36,13 @@ img#branch {
   color: #ff0000;
   font-size: 32px;
   background-color: #ddd;
-}          
-#admin-nug-one a {
-  color: #ff0000;
-  float: right;
-  font-size: 12px;    
-  padding-left: 4px;
-/*  position: absolute;*/
-/*  border-bottom: 4px solid #000;*/
-/*  border-right: 2px solid #000;*/
-/*  top: 150px; left: 824px;*/
-
-}             
-#admin-nug-two a {
-  color: #ff0000;
-  float: right;  
-  font-size: 12px;
-  padding-right: 4px;
-/*  position: absolute;*/
-/*  border-bottom: 2px solid #000;*/
-  border-right: 2px solid #000;
-/*  top: 176px; left: 819px;*/
+}                        
+#side {           
+  margin-top: 40px;
+  margin-left: 10px;
+}  
+#side h3 {
+  color: #333;
 }
 hr {
   border: 0;
@@ -158,12 +144,10 @@ h4 {
   width: 580px;
   margin-bottom: 16px;
 }
-
 #nugget p, #nugget h1, #nugget a {
   background: #D6FFAF;
   color: #000;  
 }               
-
 #nugget img.add_button {
   float: right ;
 }
@@ -238,7 +222,8 @@ p {
   font-size: 12px;
   background-color: #ccc;
   min-height: 46px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 4px;
 }
 #ft .right {
   float: right;
