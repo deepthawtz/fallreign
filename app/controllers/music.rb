@@ -1,9 +1,13 @@
-class Catalog < Application
+class Music < Application
+  
+  def popout_player
+    render "Fall Reign Player"
+  end
 
-  def index
-    @albums = Album.all
-    @artists = Artist.all
-    render
+  def playlist
+    only_provides :xspf
+    @songs = Song.all
+    render :playlist
   end
   
 end
