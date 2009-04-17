@@ -1,14 +1,16 @@
-
 = paginated_section @articles do
   - @articles.each do |article|
     .article
       %h2.title
         = article.title
       %h3.created_at
-        = article.created_at.strftime("%b %d %Y   ")
-        / = image_tag "/images/date.gif"
-      
+        = article.created_at.strftime("+ %b %d %Y   ")
+    
       .body
-        = RedCloth.new(article.body).to_html
-         
-         
+        = RedCloth.new(article.body).to_html[0,100]
+        %a{:href => "/articles/#{article.id}"} ..read more                                       
+
+- throw_content :sidebar do     
+  %h3 Have a Listen
+  %object{:type => "application/x-shockwave-flash", :width => "180", :height => "14", :data => "/xspf_player.swf?playlist_url=/music/playlist.xspf"}
+        
