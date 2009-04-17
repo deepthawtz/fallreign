@@ -1,10 +1,11 @@
-%h1 Links 
+#nugget
+  %h1 Links 
 
-- num = 0
-- @links.each do |link|
-  - num += 1
-  .link
-    %h2.title
-      %a{ :href => "#{link.url}" }
-        == #{num}.
-        = link.title 
+  - num = 0
+  - @links.each_with_index do |link, index|
+    .link
+      %h2.title
+        %a{ :href => "#{link.url}" }
+          == #{index + 1}.
+          = link.title 
+                                                         
