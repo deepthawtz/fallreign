@@ -1,0 +1,9 @@
+%h1 Edit Your Song
+%p edit this view in /app/views/audio_files/edit.html.haml
+
+= error_messages_for @audio
+
+= form_for(@audio, :action => url(:audio, @audio)) do
+  = partial 'form'
+  %p
+    = submit "Update"

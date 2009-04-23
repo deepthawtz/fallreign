@@ -26,8 +26,8 @@ class Admin < Application
     @arts = Art.all
     render
   end
-  def songs
-    @songs = Song.all
-    render
+  def audio_files
+    @audio_files = AudioFile.all
+    render :audio_files
   end    
 end

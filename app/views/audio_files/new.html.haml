@@ -1,0 +1,9 @@
+.error
+  = error_messages_for @audio_file
+
+= form_for(@audio_file, :action => url(:audio_files)) do
+  #title New Song
+  = partial 'form'
+  .submit
+    = submit "Create"
+

@@ -1,11 +1,11 @@
 Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do
-  resources :links
-  resources :arts
-  resources :articles
-  resources :artists
   resources :albums
-  resources :songs
+  resources :artists
+  resources :articles
+  resources :audio_files
+  resources :arts
+  resources :links
   
   # Adds the required routes for merb-auth using the password slice
   slice(:merb_auth_slice_password, :name_prefix => nil, :path_prefix => "")

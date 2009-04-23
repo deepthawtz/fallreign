@@ -1,0 +1,16 @@
+#new_button.ui-corner-all
+  .ui-icon.ui-icon-plusthick
+  = link_to 'Create New Song', url(:new_audio_file)
+
+%table.list
+  %tr
+  - @audio_files.each do |song|
+    %tr{:class => "#{cycle(:odd,:even)}"}
+      %td.name
+        = song.title
+      %td.small
+        = link_to 'Show', url(:audio_file, song)
+      %td.small
+        = link_to 'Edit', url(:edit_audio_file, song)
+      %td.small
+        = delete_button song, 'Delete', :class => 'delete'        
