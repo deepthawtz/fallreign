@@ -1,9 +1,0 @@
-.row 
-= file_field :audio, :label => '<b>Upload MP3</b>'
-.row
-= text_field :title, :label => '<b>Song Title</b>'
-.row
-= text_field :creator, :label => '<b>Artist</b>'
-.row 
-= select :album_id, :label => '<b>Which Album?</b>', :collection => Album.all.map { |a| [a.id, a.title] }  
-
