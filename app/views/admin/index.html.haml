@@ -4,7 +4,9 @@
       = image_tag 'lawft_logo.png'         
       %h1 Lawft Administration Console
     %br        
-    %ul.admin_top
+    %ul.admin_top                        
+      %li
+        Welcome
       %li.ui-corner-all
         .ui-icon.ui-icon-home
         %a{:href => "/" } 
@@ -36,6 +38,6 @@
           %a{:href => "/admin/gallery"} 
             == Gallery <span class="count">(#{Art.count})</span>
         %li
-          %a{:href => "/admin/songs"} 
-            == Songs <span class="count">(#{Song.count})</span>
+          %a{:href => "/admin/audio_files"} 
+            == Songs <span class="count">(#{AudioFile.count})</span>
     
