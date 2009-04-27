@@ -1,0 +1,12 @@
+#settings
+  = form_for(@artist, :action => url(:artists) ) do
+    .row
+      = text_field :site_title, :label => "Site Title: "
+    .row
+      = text_field :ga_account, :label => "Google Analytics Account: "
+    .row
+      = text_field :adsense_account, :label => "Google Adsense Account: "
+    .row
+      = file_field :site_banner, :label => "Site Banner (950x120):", :class => "fileupload" 
+    .submit.ui-corner-all
+      = submit "Create", :class => "create"

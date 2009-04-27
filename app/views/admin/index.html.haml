@@ -1,19 +1,22 @@
 #admin_nav
   #admin                            
     #lawft
-      = image_tag 'lawft_logo.png'         
+      = image_tag 'lawft_logo.png', :id => 'logo'         
       %h1 Lawft Administration Console
     %br        
-    %ul.admin_top                        
+    %ul.greeting                                        
       %li
-        Welcome
+        =image_tag 'grilla_icon.png'
+      %li
+        <span style="color: #005DAA">Serious Administrator Guy</span>
+    %ul.admin_top                        
       %li.ui-corner-all
         .ui-icon.ui-icon-home
         %a{:href => "/" } 
           Your Site
       %li.ui-corner-all 
         .ui-icon.ui-icon-wrench
-        %a{:href => "#"} 
+        %a{:href => "/admin/settings"} 
           Settings
       %li.ui-corner-all  
         %a{:href => "/logout"}

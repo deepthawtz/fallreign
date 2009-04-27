@@ -9,8 +9,11 @@
       %td.name
         = song.title
       %td.small
+        .ui-icon.ui-icon-document                  
         = link_to 'Show', url(:audio_file, song)
-      %td.small
+      %td.small                     
+        .ui-icon.ui-icon-pencil           
         = link_to 'Edit', url(:edit_audio_file, song)
       %td.small
+        .ui-icon.ui-icon-trash            
         = delete_button song, 'Delete', :class => 'delete'        

@@ -1,6 +1,19 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick
-  = link_to 'Create New Art', url(:new_art)
+  = link_to 'Create New Art', "#", :id => "create3" #url(:new_art)
+
+.form
+  = form_for(@art, :action => url(:arts) ) do
+    .row
+      = file_field :image, :label => "Image:", :class => "fileupload"
+    .row
+      = text_field :title, :label => "Title: "
+    .row
+      = text_field :artist, :label => "Artist: "
+    .row
+      = text_area :description, :label => "Description: "
+    .submit
+      = submit "Create", :class => "create"
 
 %table.list
   %tr
@@ -10,11 +23,14 @@
         = image_tag art.image.url(:small)
       %td.name
         = art.title
-      %td.small
+      %td.small                          
+        .ui-icon.ui-icon-document            
         = link_to 'Show', url(:art, art)
-      %td.small
+      %td.small                        
+        .ui-icon.ui-icon-pencil              
         = link_to 'Edit', url(:edit_art, art)
       %td.small
+        .ui-icon.ui-icon-trash            
         = delete_button art, 'Delete', :class => 'delete'  
 
 

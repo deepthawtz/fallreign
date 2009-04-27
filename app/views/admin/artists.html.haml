@@ -1,6 +1,20 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick
-  = link_to 'Create New Artist', url(:new_artist)
+  = js_include_tag 'admin_forms.js'        
+  = link_to 'Create New Artist', "#", :id => "create1"  #url(:new_artist)
+                           
+.form
+  = form_for(@artist, :action => url(:artists) ) do
+    .row
+      = text_field :name, :label => "Name: "
+    .row
+      = text_area :bio, :label => "Description: ", :rows => "6"
+    .row
+      = text_field :external_links, :label => "Homepage: "
+    .row
+      = file_field :image, :label => "Image:", :class => "fileupload" 
+    .submit.ui-corner-all
+      = submit "Create", :class => "create"
 
 %table.list
   %tr
@@ -13,10 +27,27 @@
           = artist.name
         %td.small                
           .ui-icon.ui-icon-document
-          = link_to 'Show', url(:artist, artist)
+          = link_to 'Show', "#", :class => "showme"
         %td.small               
           .ui-icon.ui-icon-pencil
-          = link_to 'Edit', url(:edit_artist,  artist)
+          = link_to 'Edit', "#", :class => "editme" #url(:edit_artist,  artist)
         %td.small                                             
           .ui-icon.ui-icon-trash
           = delete_button artist, 'Delete', :class => 'delete'  
+    %tr.show
+      %td
+        #nugget
+          %h1
+            = artist.name 
+          %p
+            = link_to 'Homepage', "#{artist.external_links}"
+          %p
+            = artist.bio                
+          %h3 Albums
+          %hr                                           
+            / %a{:href => "/albums/#{album.id}"}
+            /   = image_tag album.image.url(:small)
+            / %br                                              
+            / = album.release_year
+            / %br
+            / = album.title

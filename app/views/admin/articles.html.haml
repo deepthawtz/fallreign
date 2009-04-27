@@ -1,6 +1,16 @@
 #new_button.ui-corner-all
-  .ui-icon.ui-icon-plusthick
-  = link_to 'Create New Article', url(:new_article)
+  .ui-icon.ui-icon-plusthick           
+  = js_include_tag 'admin_forms.js'
+  = link_to 'Create New Article', "#", :id => "create2" #url(:new_article)
+                         
+.form
+  = form_for(@article, :action => url(:articles) ) do
+    .row
+      = text_field :title, :label => "Title: "
+    .row
+      = text_area :body, :label => "Body: ", :rows => "20"
+    .submit.ui-corner-all
+      = submit "Create", :class => "create"
 
 %table.list
   %tr
@@ -8,11 +18,14 @@
     %tr{:class => "#{cycle(:odd, :even)}"}
       %td.name
         = article.title
-      %td.small
+      %td.small                       
+        .ui-icon.ui-icon-document      
         = link_to 'Show', url(:article, article)
-      %td.small
+      %td.small               
+        .ui-icon.ui-icon-pencil      
         = link_to 'Edit', url(:edit_article, article)
       %td.small
+        .ui-icon.ui-icon-trash
         = delete_button article, 'Delete', :class => 'delete'  
 
 

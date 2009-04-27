@@ -1,3 +1,3 @@
 $(function(){  
-  $("#admin_menu").tabs();  
-});
+  $("#admin_menu").tabs();                    
+});                                           

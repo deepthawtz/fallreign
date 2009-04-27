@@ -1,33 +1,41 @@
 class Admin < Application
   before :ensure_authenticated
-
   def index              
     @article = Article.all   
     display @article, :layout => "admin"
-  end
-  
-  def artists
-    @artists = Artist.all  
-    render 
+  end  
+  def artists          
+    @artist = Artist.new
+    @artists = Artist.all
+    display @artist          
   end                    
   def albums
+    @album = Album.new
     @albums = Album.all  
-    render 
+    display @album
   end                    
-  def articles
+  def articles    
+    @article = Article.new
     @articles = Article.all  
-    render 
+    display @article
   end                    
-  def links
+  def links         
+    @link = Link.new
     @links = Link.all  
-    render 
+    display @link
   end                    
-  def gallery
+  def gallery    
+    @art = Art.new
     @arts = Art.all
-    render
+    display @art
   end
   def audio_files
+    @audio_file = AudioFile.new
     @audio_files = AudioFile.all
     render :audio_files
-  end    
+  end
+  def settings
+    @settings = Settings.all
+    render
+  end        
 end

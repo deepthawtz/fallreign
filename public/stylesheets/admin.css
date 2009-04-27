@@ -19,42 +19,58 @@ body {
   background: url(/images/stripes.png) repeat;  
 }                        
 #admin_menu {
-  margin-top: 40px;
+  margin-top: 60px;     
 }          
 #admin_menu li a span.count {
   font: 14px 'Lucida Grande'; 
 }
 #admin_nav #admin #lawft {  
-  float: left;
+  float: left;          
+  margin-bottom: 22px;
 }            
-#admin_nav #admin #lawft img {
+#admin_nav #admin #lawft img#logo {
   float: left;
   position: relative;
   top: 4px; left: 4px;
-  margin-right: 10px;
+  margin-right: 10px;            
+  border: 6px solid #fff;
 }
 #admin_nav #admin #lawft h1 {
   float: left;
   position: relative;
   top: 6px; left: 6px;
   font: bold 32px Helvetica;
-  letter-spacing: -1px;  
+  letter-spacing: -1px;
+  color: rgb(44, 67, 89);
 }
-#admin {
-  border-bottom: 42px solid #ccc;
+#admin {       
+  padding: 14px;
+  border-bottom: 12px solid #ccc;
+}                
+#admin ul.greeting {
+  padding: 6px;
+  margin-top: -22px;
+  border-bottom: 1px dotted #888;
+  float:right;
+}                   
+#admin ul.greeting li {
+  float:left;
+  margin-right: 4px;
 }
-ul.admin_top {
-  margin-left: 76%;
+ul.admin_top {  
+  margin-top: 15px;
+  float:right;
 }
 ul.admin_top li {   
   margin-left: 10px;
   float: left;   
   padding: 2px;
-  background: #999;
+  background: #ddd;
   margin: 2px;
-  margin-right: 44px;
+  margin-right: 14px;
 }
 ul.admin_top li a {
+  margin:10px;
   font: bold 14px 'Lucida Grande';
 }
 ul.admin_top li .ui-icon {
@@ -67,7 +83,7 @@ ul.admin_top li .ui-icon {
   font-size: 12px;
   font-family: Verdana, Arial, sans-serif;
   background: #ccc;
-  position:fixed;
+  position:absolute;
   top:0;left:0;width:100%;           
 }              
 a {               
@@ -81,12 +97,16 @@ table {
 table tr {
   border-bottom: 1px dotted #999;
 }
-table tr.odd {
-  background: #efefff;
-}                    
 table tr:hover {
   background: #def2bb;
 }                     
+table tr.odd {
+  background: #efefff;
+}
+table tr.show {
+  background: #eee;
+  width:100%;
+}                    
 table td.arrow {  
   padding:0px;
 }
@@ -99,7 +119,10 @@ table td.small a {
   color: maroon;       
   float: right;
   font-size: 16px;
-}             
+}            
+table td.small .ui-icon {
+  float:left;
+} 
 table td.small form {
   float: right;
 }    
@@ -135,4 +158,68 @@ table td.name {
 #new_button a {      
   font: bold 22px 'Lucida Grande';
   letter-spacing: -1px;         
+}
+.form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 2px;
+  background: #def2bb;  
+  width: 460px;
+  border: 1px solid #6ba92f;    
+  overflow:hidden;    
+}             
+.form form {
+  font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size:18px;
+  line-height:24px;
+  padding: 6px;
+  min-height: 60px;  
+}
+.form form .row {
+  padding: 6px;
+}              
+.form form label {
+  float:left;
+  font-weight: bold;
+  height:31px;
+  margin:0 44px 0 0;
+  text-align:right;
+  width:135px;  
+}
+.form form input {
+  font: bold 24px Times;
+  width: 240px;
+  height: 28px;
+  color: rgb(44, 67, 89);
+  border: 2px solid #20cefa;
+}           
+.form form input.fileupload {
+  font: normal 12px 'Lucida Grande';
+  border:none;
+}                 
+.form form input.year {
+  width: 120px;
+  margin-right: 120px;  
+}                 
+.form form select {
+  margin-right: 140px;
+}
+.form form textarea {
+  border: 2px solid #20cefa;
+  width: 240px;
+}              
+.form form .submit input#submit.create {
+  border: 2px solid #555;
+  font: bold 32px Helvetica;
+  padding: 10px;
+  color: #6ba92f;
+  margin-top: 10px;
+  width: 90%;  
+  background: #eee;
+  height: 140%;
+  -moz-border-radius: 8px; -webkit-border-radius: 8px;  
+}
+.form form .submit input#submit.create:hover {
+  cursor:hand;
+  background: #ddd;
 }

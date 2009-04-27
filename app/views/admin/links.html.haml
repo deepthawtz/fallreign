@@ -8,11 +8,14 @@
     %tr{:class => "#{cycle(:odd,:even)}"}                
       %td.name
         = link.title
-      %td.small
+      %td.small                    
+        .ui-icon.ui-icon-document            
         = link_to 'Show', url(:link, link)
-      %td.small
+      %td.small               
+        .ui-icon.ui-icon-pencil            
         = link_to 'Edit', url(:edit_link,  link)
-      %td.small
+      %td.small                          
+        .ui-icon.ui-icon-trash      
         = delete_button link, 'Delete', :class => 'delete'  
       
 
