@@ -4,7 +4,7 @@ class Artist
     
   property :id, Serial
   property :name, String, :nullable => false
-  property :bio, Text, :default => "To be provided"
+  property :bio, Text
   property :external_links, URI
 
   has n, :albums 
