@@ -1,7 +1,7 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick           
   = js_include_tag 'admin_forms.js'
-  = link_to 'Create New Article', "#", :id => "create2" #url(:new_article)
+  = link_to 'Create New Article', "#", :id => "create1" #url(:new_article)
                          
 .form
   = form_for(@article, :action => url(:articles) ) do

@@ -1,6 +1,20 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick
-  = link_to 'Create New Song', url(:new_audio_file)
+  = js_include_tag 'admin_forms.js'        
+  = link_to 'Create New Song', "#", :id => "create1"
+
+.form
+  = form_for(@audio_file, :action => url(:audio_files)) do
+    .row 
+      = file_field :track, :label => '<b>Upload MP3</b>', :class => "fileupload"
+    .row
+      = text_field :title, :label => '<b>Song Title</b>'
+    .row
+      = select :artist_id,:label=>"<b>Artist:</b>", :collection => Artist.all.map {|a| [a.id, a.name]}
+    .row 
+      = select :album_id, :label => '<b>Which Album?</b>', :collection => Album.all.map { |a| [a.id, a.title] }  
+    .submit.ui-corner-all
+      = submit "Create", :class => "create"
 
 %table.list
   %tr

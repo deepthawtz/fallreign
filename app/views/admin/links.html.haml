@@ -1,7 +1,17 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick  
-  = link_to 'Create New Link', url(:new_link)
+  = js_include_tag 'admin_forms.js'        
+  = link_to 'Create New Link', "#", :id => "create1"
 
+.form
+  = form_for(@link, :action => url(:links)) do
+    .row
+      = text_field :title, :label => "Link Name: "
+    .row
+      = text_field :url, :label => "Link address: "
+    .submit.ui-corner-all
+      = submit "Create", :class => "create"
+  
 %table.list
   %tr
   - for link in @links

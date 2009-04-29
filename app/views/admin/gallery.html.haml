@@ -1,6 +1,7 @@
 #new_button.ui-corner-all
   .ui-icon.ui-icon-plusthick
-  = link_to 'Create New Art', "#", :id => "create3" #url(:new_art)
+  = js_include_tag 'admin_forms.js'
+  = link_to 'Create New Art', "#", :id => "create1" #url(:new_art)
 
 .form
   = form_for(@art, :action => url(:arts) ) do
