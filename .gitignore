@@ -16,8 +16,7 @@ src/*
 .hgignore
 .hg/*
 .svn/*
-gems/gems/*
-gems/specifications/*
+gems/*
 merb_profile_results
 Capfile
 config/deploy.rb
