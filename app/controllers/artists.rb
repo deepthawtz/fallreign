@@ -1,6 +1,6 @@
 class Artists < Application
   # provides :xml, :yaml, :js
-  before :ensure_authenticated, :exclude => [:show,:index]
+  # before :ensure_authenticated
   
   def index
     @artists = Artist.paginate :page => params[:page], :per_page => 10
@@ -29,7 +29,7 @@ class Artists < Application
   def create(artist)
     @artist = Artist.new(artist)
     if @artist.save
-      redirect resource(@artist), :message => {:notice => "Artist was successfully created"}
+      redirect '/admin', :message => {:notice => "Artist was successfully created"}
     else
       message[:error] = "Artist failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Artists < Application
     @artist = Artist.get(id)
     raise NotFound unless @artist
     if @artist.update_attributes(artist)
-       redirect resource(@artist)
+       redirect '/admin'
     else
       display @artist, :edit
     end
@@ -50,7 +50,7 @@ class Artists < Application
     @artist = Artist.get(id)
     raise NotFound unless @artist
     if @artist.destroy
-      redirect resource(:artists)
+      redirect '/admin'
     else
       raise InternalServerError
     end
