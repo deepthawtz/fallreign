@@ -1,13 +1,30 @@
-#nugget
-  %h1.title
-    Artists
-  %br  
+= css_include_tag "catalog"
+#catalog  
+  / TODO: Search Bar
+  - @artists.each do |artist|
+    .album
+      %a{:href => "artists/#{artist.id}"}                  
+        .pic
+          = image_tag artist.image.url(:medium), :title => "#{artist.name}"
+        %h1{:title => "#{artist.name}"}
+          = artist.name[18].nil? ? artist.name : artist.name[0,18] + ".."
+        %hr          
 
-  = paginated_section @artists do
-    #artists-grid
-      - @artists.each do |artist|
-        %a{:href => "artists/#{artist.id}"}
-          = image_tag artist.image.url(:small)
-          = artist.name
+        %h3 Albums
+        %ul
+          - artist.albums.each do |album|
+            %li= album.title
+            
+/ #nugget
+/   %h1.title
+/     Artists
+/   %br  
+/ 
+/   = paginated_section @artists do
+/     #artists-grid
+/       - @artists.each do |artist|
+/         %a{:href => "artists/#{artist.id}"}
+/           = image_tag artist.image.url(:small)
+/           = artist.name
 
--#= page_entries_info @artists
+/-#= page_entries_info @artists
