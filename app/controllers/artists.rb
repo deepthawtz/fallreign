@@ -29,7 +29,7 @@ class Artists < Application
   def create(artist)
     @artist = Artist.new(artist)
     if @artist.save
-      redirect '/admin#ui-tabs-4', :message => {:notice => "Artist was successfully created"}
+      redirect '/admin#ui-tabs-4'
     else
       message[:error] = "Artist failed to be created"
       render :new

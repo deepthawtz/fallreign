@@ -29,7 +29,7 @@ class Albums < Application
   def create(album)
     @album = Album.new(album)
     if @album.save                     
-      redirect '/admin#ui-tabs-11', :message => {:notice => "Album was successfully created"}
+      redirect '/admin#ui-tabs-11'
     else
       message[:error] = "Album failed to be created"
       render :new

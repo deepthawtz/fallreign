@@ -28,7 +28,7 @@ class AudioFiles < Application
   def create(audio_file)
     @audio_file = AudioFile.new(audio_file)
     if @audio_file.save       
-      redirect '/admin#ui-tabs-19', :message => {:notice => "AudioFile was successfully created"}
+      redirect '/admin#ui-tabs-19'
     else
       message[:error] = "AudioFile failed to be created"
       render :new

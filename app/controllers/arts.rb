@@ -29,7 +29,7 @@ class Arts < Application
   def create(art)
     @art = Art.new(art)
     if @art.save
-      redirect resource(@art), :message => {:notice => "Art was successfully created"}
+      redirect '/admin#ui-tabs-17'
     else
       message[:error] = "Art failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Arts < Application
     @art = Art.get(id)
     raise NotFound unless @art
     if @art.update_attributes(art)
-       redirect resource(@art)
+      redirect '/admin#ui-tabs-17'
     else
       display @art, :edit
     end
@@ -50,7 +50,7 @@ class Arts < Application
     @art = Art.get(id)
     raise NotFound unless @art
     if @art.destroy
-      redirect resource(:arts)
+      redirect '/admin#ui-tabs-17'
     else
       raise InternalServerError
     end

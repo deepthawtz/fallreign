@@ -31,7 +31,7 @@ class Articles < Application
   def create(article)
     @article = Article.new(article)
     if @article.save
-      redirect resource(@article), :message => {:notice => "Article was successfully created"}
+      redirect '/admin#ui-tabs-13'
     else
       message[:error] = "Article failed to be created"
       render :new
@@ -42,7 +42,7 @@ class Articles < Application
     @article = Article.get(id)
     raise NotFound unless @article
     if @article.update_attributes(article)
-       redirect resource(@article)
+      redirect '/admin#ui-tabs-13'
     else
       display @article, :edit
     end
@@ -52,7 +52,7 @@ class Articles < Application
     @article = Article.get(id)
     raise NotFound unless @article
     if @article.destroy
-      redirect resource(:articles)
+      redirect '/admin#ui-tabs-13'
     else
       raise InternalServerError
     end
