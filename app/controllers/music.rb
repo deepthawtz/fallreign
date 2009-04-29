@@ -1,12 +1,12 @@
 class Music < Application
   
   def popout_player
-    render "Fall Reign Player"
+    render :layout => nil
   end
 
   def playlist
     only_provides :xspf
-    @songs = Song.all
+    @audio_tracks = AudioFile.all
     render :playlist
   end
   
