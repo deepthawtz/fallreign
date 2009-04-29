@@ -21,6 +21,7 @@ gems/specifications/*
 merb_profile_results
 Capfile
 config/deploy.rb
+bin/*
 public/uploads/*
 public/audio/*
 *.pxm
