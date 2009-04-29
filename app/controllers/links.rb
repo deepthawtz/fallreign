@@ -1,6 +1,6 @@
 class Links < Application
   # provides :xml, :yaml, :js
-  before :ensure_authenticated, :exclude => [:index, :show]
+  # before :ensure_authenticated
 
   def index
     @links = Link.all
@@ -29,7 +29,7 @@ class Links < Application
   def create(link)
     @link = Link.new(link)
     if @link.save
-      redirect resource(@link), :message => {:notice => "Link was successfully created"}
+      redirect '/admin#ui-tabs-15', :message => {:notice => "Link was successfully created"}
     else
       message[:error] = "Link failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Links < Application
     @link = Link.get(id)
     raise NotFound unless @link
     if @link.update_attributes(link)
-       redirect resource(@link)
+       redirect '/admin#ui-tabs-15'
     else
       display @link, :edit
     end
@@ -50,7 +50,7 @@ class Links < Application
     @link = Link.get(id)
     raise NotFound unless @link
     if @link.destroy
-      redirect resource(:links)
+      redirect '/admin#ui-tabs-15'
     else
       raise InternalServerError
     end
