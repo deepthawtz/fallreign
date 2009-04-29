@@ -29,7 +29,7 @@ class Artists < Application
   def create(artist)
     @artist = Artist.new(artist)
     if @artist.save
-      redirect '/admin', :message => {:notice => "Artist was successfully created"}
+      redirect '/admin#ui-tabs-11', :message => {:notice => "Artist was successfully created"}
     else
       message[:error] = "Artist failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Artists < Application
     @artist = Artist.get(id)
     raise NotFound unless @artist
     if @artist.update_attributes(artist)
-       redirect '/admin'
+       redirect '/admin#ui-tabs-11'
     else
       display @artist, :edit
     end
@@ -50,7 +50,7 @@ class Artists < Application
     @artist = Artist.get(id)
     raise NotFound unless @artist
     if @artist.destroy
-      redirect '/admin'
+      redirect '/admin#ui-tabs-11'
     else
       raise InternalServerError
     end

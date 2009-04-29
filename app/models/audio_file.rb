@@ -6,8 +6,10 @@ class AudioFile
   property :title, String 
   property :creator, String
   property :album_id, String
+  property :artist_id, Integer 
 
   belongs_to :album   
+  # belongs_to :artist   
   
   has_attached_file :track,
     :default_url => "/audio/:attachment",
