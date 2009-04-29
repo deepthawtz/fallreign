@@ -29,7 +29,7 @@ class Albums < Application
   def create(album)
     @album = Album.new(album)
     if @album.save                     
-      redirect '/admin', :message => {:notice => "Album was successfully created"}
+      redirect '/admin#ui-tabs-11', :message => {:notice => "Album was successfully created"}
     else
       message[:error] = "Album failed to be created"
       render :new
@@ -40,7 +40,7 @@ class Albums < Application
     @album = Album.get(id)
     raise NotFound unless @album
     if @album.update_attributes(album)
-      redirect '/admin'
+      redirect '/admin#ui-tabs-11'
     else
       display @album, :edit
     end
@@ -50,7 +50,7 @@ class Albums < Application
     @album = Album.get(id)
     raise NotFound unless @album
     if @album.destroy
-      redirect '/admin'
+      redirect '/admin#ui-tabs-11'
     else
       raise InternalServerError
     end

@@ -8,6 +8,7 @@ class Artist
   property :external_links, URI
 
   has n, :albums 
+  has n, :audio_files
           
   has_attached_file :image,
     :default_url => "/uploads/artists/:attachment/missing_:style.png",

@@ -4,6 +4,7 @@
 = error_messages_for @audio_file
 
 = form_for(@audio_file, :action => url(:audio_files, @audio_file)) do
+  #title Edit Song
   = partial 'form'
   .submit
     = submit "Update"
