@@ -159,6 +159,70 @@ table td.name {
   font: bold 22px 'Lucida Grande';
   letter-spacing: -1px;         
 }
+.edit {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 2px;
+  background: #def2bb;  
+  width: 460px;
+  border: 1px solid #6ba92f;    
+  overflow:hidden;    
+}             
+.edit form {
+  font-family:"Lucida Grande","Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size:18px;
+  line-height:24px;
+  padding: 6px;
+  min-height: 60px;  
+}
+.edit form .row {
+  padding: 6px;
+}              
+.edit form label {
+  float:left;
+  font-weight: bold;
+  height:31px;
+  margin:0 44px 0 0;
+  text-align:right;
+  width:135px;  
+}
+.edit form input {
+  font: bold 24px Times;
+  width: 240px;
+  height: 28px;
+  color: rgb(44, 67, 89);
+  border: 2px solid #20cefa;
+}           
+.edit form input.fileupload {
+  font: normal 12px 'Lucida Grande';
+  border:none;
+}                 
+.edit form input.year {
+  width: 120px;
+  margin-right: 120px;  
+}                 
+.edit form select {
+  margin-right: 140px;
+}
+.edit form textarea {
+  border: 2px solid #20cefa;
+  width: 240px;
+}              
+.edit form .submit input#submit.create {
+  border: 2px solid #555;
+  font: bold 32px Helvetica;
+  padding: 10px;
+  color: #6ba92f;
+  margin-top: 10px;
+  width: 90%;  
+  background: #eee;
+  height: 140%;
+  -moz-border-radius: 8px; -webkit-border-radius: 8px;  
+}
+.edit form .submit input#submit.create:hover {
+  cursor:hand;
+  background: #ddd;
+}
 .form {
   margin-top: 20px;
   margin-bottom: 20px;

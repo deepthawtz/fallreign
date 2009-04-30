@@ -15,5 +15,5 @@ $(document).ready(function () {
   
   $("#gallery a").lightBox({
     imageLoading: 'images/loadingAnimation.gif'    
-  })
+  });
 });
