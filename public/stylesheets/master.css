@@ -127,29 +127,29 @@ h4 {
   background:transparent;
 }
 #nugget {
-  background: #D6FFAF;
+  background: #dfdbcb;
   -webkit-border-bottom-right-radius: 14px 14px;
   -webkit-border-top-left-radius: 14px 14px;                          
-  border: 2px solid #9BEF2C; 
+  border: 2px solid #ada997; 
   padding: 10px;
   margin-right: 20px;
   margin-bottom: 16px;
 }
 #gallery {
-  background: #D6FFAF;
+  background: #dfdbcb;
   -webkit-border-bottom-right-radius: 14px 14px;
   -webkit-border-top-left-radius: 14px 14px;                          
-  border: 2px solid #9BEF2C; 
+  border: 2px solid #ada997; 
   padding: 10px;
   width: 580px;
   margin-bottom: 16px;
 }
 #nugget p, #nugget h1, #nugget a {
-  background: #D6FFAF;
+  background: #dfdbcb;
   color: #000;  
 }               
 #nugget img.add_button {
-  float: right ;
+  float: right;
 }
 #nugget div.row {
   font-color:#000;
@@ -163,8 +163,8 @@ h4 {
   background: #fcf0f0;
 }
 .side-nugget {
-  background-color: #eaf2f5;
-  border: 1px solid #fbf2f5;
+  background-color: #dfdbcb;
+  border: 1px solid #ada997;
   padding: 1px;   
 }
 .side-nugget p {

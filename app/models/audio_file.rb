@@ -9,7 +9,7 @@ class AudioFile
   property :artist_id, Integer 
 
   belongs_to :album   
-  # belongs_to :artist   
+  belongs_to :artist   
   
   has_attached_file :track,
     :default_url => "/audio/:attachment",

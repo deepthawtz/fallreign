@@ -4,7 +4,7 @@
     %title Fall Reign Records
     %meta{ :content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}/
     = css_include_tag :reset_fonts_grids, :master, :lavalamp
-    = js_include_tag :jquery, :easing, :application, :lavalamp
+    = js_include_tag :jquery, :easing, :application, :lavalamp, :ga
    
   %body 
     #doc2.yui-t2
@@ -24,10 +24,16 @@
             - [:error,:success,:notice].each do |type|
               - if message[type]
                 %div{:class => type}= message[:type]
-            = catch_content :for_layout                
-        
+            = catch_content :for_layout           
+            %br
+            %br
+            %br
+            
         #side.yui-b
           = catch_content :sidebar                              
+        
+        %object{ :type => "application/x-shockwave-flash", :height => "170", :width => "440", :data => "/xspf_player.swf?playlist_url=/music/playlist.xspf&autoresume=1&autoplay=1" }
+        %param{ :name => "movie", :value => "/xspf_player.swf?playlist_url=/music/playlist.xspf&autoresume=1" }
         
         #ft
           %hr
@@ -40,5 +46,3 @@
             &copy; 2009 
             %a{ :href => "/"}
               fall reign&nbsp;&nbsp;
-        
-  = js_include_tag :ga
