@@ -15,19 +15,6 @@
       = file_field :image, :label => "Image: ", :class => "fileupload" 
     .submit.ui-corner-all
       = submit "Create", :class => "create"
-      
-.edit
-  = form_for(@artist, :action => url(:artists, @artist)) do
-    .row
-      = text_field :name, :label => "Name: ", :value => "#{@artists.first.name}"
-    .row
-      = text_area :bio, :label => "Description/Bio: "
-    .row
-      = text_field :external_links, :label => "Links/Homepage: "
-    .row
-      = file_field :image, :label => "Image: ", :class => "fileupload"
-    .submit.ui-corner-all
-      = submit "Update", :class => 'create'
 
 %table.list
   %tr
@@ -40,10 +27,10 @@
           = artist.name
         %td.small                
           .ui-icon.ui-icon-document
-          = link_to 'Show', "#", :class => "showme"
+          = link_to 'Show', url(:artist, artist)
         %td.small               
           .ui-icon.ui-icon-pencil
-          = link_to 'Edit', "#", :class => "editme"
+          = link_to 'Edit', url(:edit_artist, artist)
         %td.small                                             
           .ui-icon.ui-icon-trash
           = delete_button artist, 'Delete', :class => 'delete'

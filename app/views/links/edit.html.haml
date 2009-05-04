@@ -3,9 +3,9 @@
 = form_for(@link, :action => url(:link, @link)) do
   #title Edit Link
   .row
-  = text_field :title, :label => "Give a Link a Name: "
+  = text_field :title, :label => "Link Name: "
   .row
-  = text_field :url, :label => "Da link: "
+  = text_field :url, :label => "Link Address: "
   .submit
   = submit "Update"
 
