@@ -97,12 +97,16 @@ table {
 table tr {
   border-bottom: 1px dotted #999;
 }
-table tr:hover {
-  background: #def2bb;
-}                     
 table tr.odd {
   background: #efefff;
 }
+table tr.odd:hover {
+  background: #def2bb;
+}                     
+table tr.odd:hover {
+  background: #def2bb;
+}                     
+
 table tr.show {
   background: #eee;
   width:100%;
