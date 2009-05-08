@@ -1,7 +1,10 @@
 %h1 Song
-%h3 Title
-= @audio_file.title
-
+%br
+%h2 Title
+%hr
+%p
+  = @audio_file.title
+%br
 / %p                 
 /   %a{:href => "#{@song.audio.url}"}
 /     Play 

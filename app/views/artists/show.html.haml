@@ -3,14 +3,20 @@
   = image_tag @artist.image.url(:medium)
   = @artist.name 
 %br
+%br
 = @artist.bio       
 %br
 %br
-= link_to 'Homepage', "#{@artist.external_links}"
 %br
-%br         
+(
+= link_to 'Homepage', "#{@artist.external_links}"
+)
+%br
+%br
+%br
+%hr         
 %h3 Albums
-%hr                                 
+%hr
 %br
 - @artist.albums.each do |album|
   %a{:href => "/albums/#{album.id}"}
@@ -22,6 +28,5 @@
     %p
       %hr
   %br
-  %br
 
-= link_to 'Back', url(:artists)  
+= link_to 'Back to Artists', url(:artists)  

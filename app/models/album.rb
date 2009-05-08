@@ -11,11 +11,12 @@ class Album
   property :songs, Text
 
   belongs_to :artist                               
-  # belongs_to :audio_file
+  # belongs_to :audio_files
   # belongs_to :album
 
   has n, :audio_file
-  
+  # has n, :songs
+
   has_attached_file :image,
     :default_url => "/uploads/albums/:attachment/missing_:style.png",
     :url    => "/uploads/albums/:id/:style/:basename.:extension",
