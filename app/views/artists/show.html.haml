@@ -1,22 +1,27 @@
-#nugget
-  %h1
-    = image_tag @artist.image.url(:medium)
-    = @artist.name 
-  %p
-    = link_to 'Homepage', "#{@artist.external_links}"
-  %p
-    = @artist.bio                
-  %h3 Albums
-  %hr                                           
-  %br
-  - @artist.albums.each do |album|
-    %a{:href => "/albums/#{album.id}"}
-      = image_tag album.image.url(:small)
-    %br                                              
-    = album.release_year
-    %br
+/#nugget
+%h1
+  = image_tag @artist.image.url(:medium)
+  = @artist.name 
+%br
+= @artist.bio       
+%br
+%br
+= link_to 'Homepage', "#{@artist.external_links}"
+%br
+%br         
+%h3 Albums
+%hr                                 
+%br
+- @artist.albums.each do |album|
+  %a{:href => "/albums/#{album.id}"}
+    = image_tag album.image.url(:small)
     = album.title
-    %br
-    %br
+    (
+    = album.release_year
+    )
+    %p
+      %hr
+  %br
+  %br
 
 = link_to 'Back', url(:artists)  

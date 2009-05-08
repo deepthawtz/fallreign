@@ -11,6 +11,9 @@ class Album
   property :songs, Text
 
   belongs_to :artist                               
+  # belongs_to :audio_file
+  # belongs_to :album
+
   has n, :audio_file
   
   has_attached_file :image,
