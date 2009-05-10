@@ -25,7 +25,9 @@
   / - count += 1
   / - @albums.each do |album|
   
-  = @album.songs
+  /= @album.songs
+  - @album.songs.split(",").each_with_index do |song, number|
+    == <span style="font: bold 18px Times;color: grey">#{number + 1}.</span>&nbsp;&nbsp; <b>#{song.chomp("\s").capitalize}</b><br />
   %br
   %br
   %br

@@ -1,7 +1,7 @@
 = error_messages_for @art
 
-= form_for(@art, :action => url(:arts) ) do
-  #title New art
+= form_for(@art, :action => url(:art, @art) ) do
+  #title Edit art
   .row
   = text_field :title, :label => "Title: "
   .row
@@ -10,7 +10,7 @@
   = text_area :description, :label => "Description: "
   .row
   = file_field :image, :label => "Image:"
-  .submi
+  .submit
   = submit "Update"
 
 = link_to 'Show', url(:art, @art)
