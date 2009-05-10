@@ -24,4 +24,5 @@ bin/*
 public/uploads/*
 public/audio/*
 *.pxm
+*.swp
 *.psd
