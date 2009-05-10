@@ -11,7 +11,7 @@ class Album
   property :songs, Text
 
   belongs_to :artist                               
-  has n, :audio_file
+  has n, :audio_files
   
   has_attached_file :image,
     :default_url => "/uploads/albums/:attachment/missing_:style.png",
