@@ -1,12 +1,11 @@
-%h1 Song
-%br
-%h2 Title
+%h2 Artist and Song Title
 %hr
-%p
+%h3
+  = @audio_file.artist.name
+  |
   = @audio_file.title
+%p                 
+  Use Mp3 player to preview song
 %br
-/ %p                 
-/   %a{:href => "#{@song.audio.url}"}
-/     Play 
-
+ 
 = link_to 'Edit',  url(:edit_audio_file,  @audio_file)

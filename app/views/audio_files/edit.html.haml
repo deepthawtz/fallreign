@@ -12,10 +12,9 @@
   = select :album_id, :label => '<b>Album:</b>', :collection => Album.all.map { |a| [a.id, a.title] }
   .submit
   = submit "Update"
-  / #title Edit Song
-  /   = partial 'form'
-
 
 = link_to 'Show', url(:audio_file, @audio_file)
+|
+= link_to 'Back to admin tab', "/admin#ui-tabs-19"
 |
 = link_to 'Back to Home', "/home"
