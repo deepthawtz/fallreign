@@ -1,11 +1,12 @@
-%h2 Artist and Song Title
+%h2 Artist | Song Title
 %hr
-%h3
+%br
+%h4
   = @audio_file.artist.name
   |
   = @audio_file.title
 %p                 
-  Use Mp3 player to preview song
+  * Use the Mp3 player to play this song
 %br
  
 = link_to 'Edit',  url(:edit_audio_file,  @audio_file)
