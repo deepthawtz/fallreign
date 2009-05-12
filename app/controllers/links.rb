@@ -1,6 +1,6 @@
 class Links < Application
   # provides :xml, :yaml, :js
-  before :ensure_authenticated, :exclude => [:index, :show]
+  # before :ensure_authenticated
 
   def index
     @links = Link.all
