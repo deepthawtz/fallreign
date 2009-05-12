@@ -14,11 +14,11 @@
     .row
       = text_field :catalog_index, :label => "<b>Catalog Id:</b>", :length => "8"
     .row
-      = text_field :release_year, :label => '<b>Release Year:</b><br />      <span style="color:red;font-size:9px">*year only (eg, 1994)</span>', :class => "year"
+      = text_field :release_year, :label => '<b>Release Year:</b><br />      <span style="color:red;font-size:9px">* Year only (eg, 1994)</span>', :class => "year"
     .row
       = text_area :description, :label => "<b>Description:</b>", :rows => "6", :cols => "30"
     .row
-      = text_area :songs, :label => '<b>Songs:</b><br /><span style="color:red;font-size:9px">*separate songs w/ a comma</span>', :rows => "6", :cols => "30"      
+      = text_area :songs, :label => '<b>Songs:</b>', :rows => "6", :cols => "30"      
     .submit.ui-corner-all
       = submit "Create", :class => "create"
 

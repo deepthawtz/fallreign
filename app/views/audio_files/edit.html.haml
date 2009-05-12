@@ -1,7 +1,20 @@
 = error_messages_for @audio_file
 
-= form_for(@audio_file, :action => url(:audio_files, @audio_file)) do
+= form_for(@audio_file, :action => url(:audio_file, @audio_file)) do
   #title Edit Song
-  = partial 'form'
+  .row 
+  = file_field :track, :label => '<b>Upload MP3:</b>'
+  .row
+  = text_field :title, :label => '<b>Song Title:</b>'
+  .row
+  = select :artist_id,:label=>"<b>Artist:</b>", :collection => Artist.all.map {|a| [a.id, a.name]}
+  .row 
+  = select :album_id, :label => '<b>Album:</b>', :collection => Album.all.map { |a| [a.id, a.title] }
   .submit
-    = submit "Update"
+  = submit "Update"
+
+= link_to 'Show', url(:audio_file, @audio_file)
+|
+= link_to 'Back to admin tab', "/admin#ui-tabs-19"
+|
+= link_to 'Back to Home', "/home"

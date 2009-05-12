@@ -5,7 +5,7 @@
 
   - if @album.artist.nil? 
     %h2        
-      = "[unkown]"
+      = "[unknown]"
   - else                
     %h2
       %a{:href => "/artists/#{@album.artist.id}"}
@@ -24,4 +24,8 @@
     == <span style="font: bold 18px Times;color: grey">#{number + 1}.</span>&nbsp;&nbsp;   <b>#{song.chomp("\s").capitalize}</b><br />
 
   %br 
+  %br 
+  %br 
       
+  
+  = link_to 'Back to Catalog', "/catalog"  
