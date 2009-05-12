@@ -10,7 +10,8 @@ describe "/gallery" do
   end                             
   
   it "should return 10 images per page" do
-    @response.should have_xpath
+    pending
+    @response.should have_selector ""
   end
   
 end

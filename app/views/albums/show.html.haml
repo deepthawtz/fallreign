@@ -16,13 +16,12 @@
   %br
   %br
   %br
-  / %h2 Tracks
+  %h2 Tracks
   %hr
   %br
-  /- b = @album.songs.split(",")     
-  /- count = 1
-  / @album.songs.split(",").each do |song|
-  /  == <span style="font: bold 18px Times;color: grey">#{count}.</span>&nbsp;&nbsp;   <b>#{song.chomp("\s").capitalize}</b>
-  /- count += 1
+
+  - @album.songs.split(",").each_with_index do |song, number|
+    == <span style="font: bold 18px Times;color: grey">#{number + 1}.</span>&nbsp;&nbsp;   <b>#{song.chomp("\s").capitalize}</b><br />
+
   %br 
       

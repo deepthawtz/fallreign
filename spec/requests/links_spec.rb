@@ -18,8 +18,7 @@ describe "resource(:links)" do
     end
 
     it "contains a list of links" do
-      pending
-      @response.should have_xpath("//ul")
+      @response.should have_selector("ul")
     end
     
   end
@@ -30,8 +29,7 @@ describe "resource(:links)" do
     end
     
     it "has a list of links" do
-      pending
-      @response.should have_xpath("//ul/li")
+      @response.should have_selector("li")
     end
   end
   
@@ -43,7 +41,7 @@ describe "resource(:links)" do
     end
     
     it "redirects to resource(:links)" do
-      @response.should redirect_to(resource(Link.first), :message => {:notice => "link was successfully created"})
+      @response.should redirect_to('/admin#ui-tabs-15', :message => {:notice => "link was successfully created"})
     end
     
   end
@@ -56,7 +54,7 @@ describe "resource(@link)" do
      end
 
      it "should redirect to the index action" do
-       @response.should redirect_to(resource(:links))
+       @response.should redirect_to('/admin#ui-tabs-15')
      end
 
    end
@@ -102,7 +100,7 @@ describe "resource(@link)", :given => "a link exists" do
     end
   
     it "redirect to the article show action" do
-      @response.should redirect_to(resource(@link))
+      @response.should redirect_to('/admin#ui-tabs-15')
     end
   end
   
