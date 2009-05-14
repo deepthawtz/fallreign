@@ -22,6 +22,7 @@ Capfile
 config/deploy.rb
 bin/*
 public/uploads/*
+public/uploads-backup/*
 public/audio/*
 *.pxm
 *.swp
